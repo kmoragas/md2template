@@ -1,0 +1,113 @@
+%%% LaTeX Template: Article/Thesis/etc. Including abstract
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep to referal to http://www.howtotex.com/ here.
+%%% February 2011
+
+%%%%% Preamble
+\documentclass[11pt,a4paper]{scrartcl}			% KOMA scrartcl is called for several reasons:
+																		%	Nicer page margins without the need of the 'geometry' package
+																		% 	Perfectly fitting abstract environment
+																		% 	High customizability
+
+%\usepackage[latin1]{inputenc}							% Input encoding
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb}	% Math packages
+\usepackage{multicol}
+
+%%%%% Definitions
+%%% Define a new command that prints the title only
+\makeatletter							% Begin definition
+\def\printtitle{%						% Define command: \printauthor
+    {\centering \huge \normalfont \textbf{\@title}\par}}		% Typesetting
+\makeatother							% End definition
+
+
+$if(Titulo)$
+\title{$Titulo$}
+$else$
+\title{Sin titulo} % Codigo Curso no conocido
+$endif$
+
+%%% Define a new command that prints the author(s) only
+\makeatletter							% Begin definition
+\def\printauthor{%					% Define command: \printtitle
+    {\large \@author}}				% Typesetting
+\makeatother							% End definition
+
+\author{%
+	$Profesor$ \\
+	$NombreCurso$ \\
+	\texttt{$Email$}\vspace{40pt} \\
+	$Institucion$ \\
+	$Escuela$ \\
+	\texttt{Julio 2015}
+	}
+	
+\renewcommand{\abstractname}{Objetivo}
+
+%%% Headers and footers
+\usepackage{fancyhdr}												% Needed to define custom headers/footers
+	\pagestyle{fancy}														% Enabling the custom headers/footers
+\usepackage{lastpage}	
+
+% Header (empty)
+\lhead{}
+\chead{}
+\rhead{}
+% Footer (you may change this to your own needs)
+\lfoot{\footnotesize \texttt{$Institucion$} \textbullet ~$Plan$}
+\cfoot{}
+\rfoot{\footnotesize página \thepage\ de \pageref{LastPage}}	% "Page 1 of 2"
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+%%% Change the 'KOMA' sectioning fonts back to standard LaTeX font (this is just a matter of taste)
+\setkomafont{sectioning}{\rmfamily\bfseries\boldmath}
+
+
+%%% Change the abstract environment
+\usepackage[runin]{abstract}			% runin option for a run-in title
+\setlength\absleftindent{10pt}		% left margin
+\setlength\absrightindent{10pt}		% right margin
+\abslabeldelim{\quad}						% 
+\setlength{\abstitleskip}{-10pt}
+\renewcommand{\abstracttextfont}{\small \slshape}	% slanted text
+
+
+%%% Start of the document
+\begin{document}
+%%% Top of the page: Author, Title and Abstact
+\begin{minipage}{0.35\linewidth}
+	\begin{flushright}
+		\printauthor
+	\end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+	\rule{3pt}{175pt}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.63\linewidth}
+%\begin{flushleft}
+\printtitle 
+\vspace{5pt}
+	\begin{abstract} 
+$Objetivo$ \\
+
+\textbf{Datos Generales}
+\begin{itemize}
+\item El valor del laboratorio: $Porcentaje$\%.
+\item Nombre del Laboratorio:  $Tema$. 
+\end{itemize}
+	\end{abstract}
+%\end{flushleft}
+\end{minipage}
+\vspace{20pt}		% Add some vertical spacing to seperate the abstract from the rest of the article
+
+%%% Start of the 'real' content of the article, using a two column layout
+
+$body$
+
+\end{document}
