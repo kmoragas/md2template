@@ -1,0 +1,343 @@
+%----------------------------------------------------------------------------------------
+% Tecnologico de Costa Rica
+% Plantilla para cursos
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+% tipo el documento
+\documentclass[11pt,fleqn]{report} 
+
+% Márgenes
+\usepackage[top=3.5cm,bottom=3cm,left=5.5cm,right=3cm,headsep=20pt,letterpaper]{geometry}
+
+% para uso del español
+\usepackage[spanish,es-lcroman,es-nosectiondot]{babel}
+% 8-bit encoding (para uso de glifos
+\usepackage[T1]{fontenc} 
+
+% Soporte para utf8
+\usepackage[utf8]{inputenc}      
+
+% Permite usar colores
+%\usepackage{color}
+
+% Permite definir colores
+\usepackage{xcolor} 
+
+% Azul TEC -> RGB:00447b
+\definecolor{tec}{HTML}{00447B}
+\definecolor{tecdark}{HTML}{003366}
+\definecolor{gray8}{HTML}{333333}
+
+% Para espaciado doble, 1.5 o simple
+\usepackage{setspace}
+
+%% Fuentes 
+
+%Fuente Avantgarde
+%\usepackage{avant} 
+
+%Fuente Helvet
+\usepackage{helvet}
+
+\usepackage{mathptmx} 
+
+% Modificaciones para espaciado
+\usepackage{microtype} 
+
+%----------------------------------------------------------------------------------------
+
+\usepackage[explicit]{titlesec}
+
+% Para el uso de imágenes
+\usepackage{graphicx}
+
+% Para cuadros con cambio de linea
+\usepackage{pbox}
+
+% Para colocar cuadros flotantes
+\usepackage{wrapfig}
+
+%para las tablas grandes
+\usepackage{longtable}
+
+% Tablas que se autoajustan
+\usepackage{tabularx}
+
+% Este no se que putas hace
+\usepackage{booktabs}
+
+% Cambiar la fuente por defecto
+\renewcommand{\familydefault}{\sfdefault}
+
+
+% Pié de página
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{etoolbox}
+
+\makeatletter
+\def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+    \vskip-\footruleskip\vskip-\footrulewidth
+    \color{\footrulecolor}
+    \leavevmode\rlap{\hspace*{-8em}\rule{16cm}{\footrulewidth}}
+    \vskip\footruleskip
+}}
+\makeatother
+
+\newcommand{\footrulecolor}{tec}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyhf{}
+
+
+\lhead{
+    \begin{picture}(0,0)
+        \put(220,0){\includegraphics[scale=0.45]{Pictures/logo_tec.png}}
+    \end{picture}
+}
+
+
+\lfoot{
+	\parindent=-8em
+	\footnotesize 
+    \textcolor{tec}{$Escuela$ - $Plan$}
+}
+\rfoot{
+	\footnotesize 
+    \textcolor{tec}{Página | \thepage \  de \pageref{LastPage} }
+}
+
+$if(NombreCurso)$
+\title{Programa de $NombreCurso$}
+$else$
+\title{Programa de IC-XXXX} % Codigo Curso no conocido
+$endif$
+
+\usepackage[pdftex, hidelinks]{hyperref}
+
+\hypersetup{pdftitle={$title-meta$}}
+
+%----------------------------------------------------------------------------------------
+%	Creación de nuevos comandos
+%----------------------------------------------------------------------------------------
+
+% Cambia el texto del nombre del comando \chapter
+\renewcommand{\chaptername}{Parte}
+
+%\renewcommand{\thechapter}{\arabic{chapter}}
+
+\newcounter{lastSectionCounter}
+% Cambia el formato del nombre del comando \chapter
+\renewcommand{\chapter}[1]{
+  \newpage
+  \parindent=-8em
+  \setcounter{lastSectionCounter}{\value{section}}
+  \stepcounter{chapter}
+  \setcounter{section}{\value{lastSectionCounter}} 
+  \textcolor{tecdark}{
+        {
+            \Large 
+            \textbf{\thechapter \ Parte. #1}}}
+  \parindent=0em
+  \vspace{5mm}
+  }
+
+\titleformat{\section}[leftmargin]
+    {
+    %\titlerule*[.6em]{\bfseries.}%
+    %\vspace{6pt}%
+    \large
+    \bfseries
+    }
+    {
+        \color{tec} \thesection
+    }{.5em}{\textcolor{tec}{#1}}
+
+\titlespacing{\section}
+{6pc}{1.5ex plus .1ex minus .2ex}{2pc}
+
+
+\titleformat{\subsection}[hang]
+    {
+    %\color{red} 
+    \bfseries
+    }
+    {\thesubsection}
+    {0pc}{#1}
+
+\titlespacing{\subsection}
+{0pc}{0pt}{5pt}
+
+
+% Cambia el formato de la sección
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+%\setlength{\parskip}{0.5em}
+
+% elimina la numeración de las subsecciones
+\renewcommand\thesubsection{}
+
+\setlength{\parskip}{10pt}
+
+
+%----------------------------------------------------------------------------------------
+%   BEGIN DOCUMENT  
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%\makeatletter
+%\def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \leavevmode\rlap{\hspace*{-8em}\rule{16cm}{\footrulewidth}}
+%    \vskip\footruleskip}}
+%\makeatother
+
+\normalsize
+\spanishsignitems
+
+%----------------------------------------------------------------------------------------
+%   Página de título	
+%----------------------------------------------------------------------------------------
+\thispagestyle{empty}
+
+\begin{picture}(0,0)
+    \put(-175,0){\includegraphics[scale=0.45]{Pictures/header_frontpage.png}}
+\end{picture}
+
+
+\parindent=-7em
+
+~\vfill
+
+\Large
+
+\textbf{
+Programa del curso
+$if(CodigoCurso)$
+$CodigoCurso$ % Codigo Curso
+$else$
+IC-XXXX % Codigo Curso no conocido
+$endif$
+}
+
+\vspace{3mm}
+
+\huge 
+
+\textbf{
+	$if(NombreCurso)$
+	$NombreCurso$ % NombreCurso
+	$else$
+	(Curso sin nombre) % NombreCurso
+	$endif$
+}
+
+\vspace{1cm}
+
+\large 
+
+\parindent=-4em
+
+\textcolor{gray8}{
+    \textbf{
+    $if(Escuela)$
+        $Escuela$ % Escuela
+    $else$
+        (Escuela no especificada) % Escuela
+    $endif$
+    }
+}
+
+\textcolor{gray8}{
+    \textbf{
+    $if(Plan)$
+        $Plan$ % Plan
+    $else$
+        (Plan no especificado) % Plan
+    $endif$
+    }
+}
+
+\normalsize 
+
+\parindent=0em
+
+
+
+%----------------------------------------------------------------------------------------
+%	Parte I: Pagina de Plan de Estudios del curso
+%----------------------------------------------------------------------------------------
+
+\chapter{Aspectos relativos al plan de estudios}
+
+
+\parindent=-7em
+
+\textcolor{tec}{
+  {\large \textbf{1 Datos generales}}}
+
+\parindent=-6em
+
+\doublespacing
+  \begin{tabularx}{\textwidth}{p{6cm}p{10cm}}
+        \textbf{Nombre del curso:}                  & $NombreCurso$         \\
+        \textbf{Código:}                            & $CodigoCurso$         \\
+        \textbf{Tipo de curso:}                     & $TipoCurso$           \\
+                                                    &                       \\
+        \textbf{Nº de créditos:}                    & $Creditos$            \\
+        \textbf{Nº horas de clase por semana:}      & $HorasClase$          \\
+        \textbf{Nº horas extraclase por semana:}    & $HorasExtraClase$     \\
+                                                    &                       \\
+        \textbf{Ubicación en el plan de estudios:}  & $UbicacionPlan$       \\
+        \textbf{Requisitos:}                        & $Requisitos$          \\
+        \textbf{Correquisitos:}                     & $Correquisitos$       \\ 
+        \textbf{El curso es requisito de:}          & $RequisitoDe$         \\
+        \textbf{Asistencia:}                        & $Asistencia$          \\
+        \textbf{Suficiencia:}                       & $Suficiencia$         \\ 
+        \textbf{Posibilidad de reconocimiento:}     & $Reconocimiento$      \\
+        \textbf{Vigencia del programa:}             & $Vigencia$            \\
+    \end{tabularx}
+\singlespacing
+
+
+\parindent=0em
+
+%----------------------------------------------------------------------------------------
+%	Cuerpo del programa de Curso
+%----------------------------------------------------------------------------------------
+
+\setcounter{section}{1}
+
+\newpage
+$body$
+
+%----------------------------------------------------------------------------------------
+%	Información del profesor
+%----------------------------------------------------------------------------------------
+
+\section{Profesor}
+
+$Profesor$ \vspace{5mm} \\
+\textbf{Email:} $Email$ \\
+\textbf{Página:} $PaginaProfesor$ \\
+\textbf{Twitter:} $Twitter$
+\\
+\\
+\textbf{Horario y lugar de consulta:} $HorarioConsulta$
+
+Los medios de comunicación oficiales del curso y contactos de los profesores serán brindados en la primera semana de clases.
+\\
+\\
+$if(SinopsisProfesor)$
+$SinopsisProfesor$ % NombreCurso
+$endif$
+
+\end{document}
