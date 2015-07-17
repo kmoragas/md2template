@@ -11,9 +11,15 @@
 																		% 	High customizability
 
 %\usepackage[latin1]{inputenc}							% Input encoding
+\usepackage[spanish,es-lcroman,es-nosectiondot]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amsfonts,amssymb}	% Math packages
 \usepackage{multicol}
+
+\usepackage{datetime}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
 
 %%%%% Definitions
 %%% Define a new command that prints the title only
@@ -35,13 +41,36 @@ $endif$
     {\large \@author}}				% Typesetting
 \makeatother							% End definition
 
+\makeatletter
+\renewcommand{\monthnamespanish}[1][\month]{%
+  \@orgargctr=#1\relax
+  \ifcase\@orgargctr
+    \PackageError{datetime}{Invalid Month number \the\@orgargctr}{%
+      Month numbers should go from 1 to 12}%
+    \or Enero%
+    \or Febrero%
+    \or Marzo%
+    \or Abril%
+    \or Mayo%
+    \or Junio%
+    \or Julio%
+    \or Agosto%
+    \or Septiembre%
+    \or Octubre%
+    \or Noviembre%
+    \or Diciembre%
+    \else \PackageError{datetime}{Invalid Month number \the\@orgargctr}{%
+      Month numbers should go from 1 to 12}%
+  \fi}
+\makeatother
+
 \author{%
 	$Profesor$ \\
-	$NombreCurso$ \\
+	\textit{$NombreCurso$} \\
 	\texttt{$Email$}\vspace{40pt} \\
 	$Institucion$ \\
 	$Escuela$ \\
-	\texttt{Julio 2015}
+	\texttt{\monthyeardate\today}
 	}
 	
 \renewcommand{\abstractname}{Objetivo}
@@ -105,6 +134,8 @@ $Objetivo$ \\
 %\end{flushleft}
 \end{minipage}
 \vspace{20pt}		% Add some vertical spacing to seperate the abstract from the rest of the article
+
+\spanishsignitems
 
 %%% Start of the 'real' content of the article, using a two column layout
 
