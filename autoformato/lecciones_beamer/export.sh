@@ -1,6 +1,9 @@
 #!/bin/bash
 # @author: kmoragas
 #pandoc -N --template=main.tex irc-mac.md --latex-engine=pdflatex -o irc-mac.pdf
+# Requirements
+# - pandoc-citeproc.x86_64
+# - firesans
 
 fullfile=$1
 outputdir=$2
@@ -44,7 +47,7 @@ sed '2{/^$/d;}' $filename.md > input1.md
 sed '/div\>/d' input1.md > input.md
 
 #pandoc -s -N --chapters --template=tec.tex input.md -o $filename.tex
-pandoc input.md -t beamer --template=lecciones_beamer.tex --slide-level 2 -o $filename.tex
+pandoc input.md -t beamer --biblatex --template=lecciones_beamer.tex --slide-level 2 -o $filename.tex
 
 #%sed -i 's/includegraphics{/includegraphics\[width=7.0cm\]{/g' "$filename.tex"
 #%sed -i 's/begin{figure}\[htbp\]/begin{figure}\[H\]/g' "$filename.tex"

@@ -8,6 +8,8 @@ titlepage-note: |
   given at Doing DH.
 institute: Universidad Cenfotec
 
+bibliography: referencias
+
 ---
 
 # Seguridad en interfases de redes inalámbricas
@@ -84,7 +86,7 @@ Los 4 servicios a garantizar son:
 
 # Arquitectura local de conexión
 
-# Mecanismos
+## Mecanismos
 
 - Existen dos mecanismos:
     + Ad-Hoc
@@ -344,6 +346,9 @@ Se hizo mejora de dos tipos de cifrado WEP:
 
 - El CCMP necesita como entradas la trama a transmitir, número de paquete o número único que se le asigna al paquete transmitido y que no se incrementa hasta enviar el siguiente paquete identificador de clave, el que identifica el número de clave temporal que usa para cifrar el paquete y clave temporal que se usa para cifrar una trama, esto cambia de una trama a otra. 
 
-- El CCMP se incluyó en el estándar de mercado WPA2, la diferencia entre el WPA y el WPA2 es sólo en el cifrado, no en la autenticación, con lo que el modo “personal” (passphrase compartida) y el modo enterprise (autenticación robusta como la EAP) seguirán siendo los mismos que en WPA .
+- El CCMP se incluyó en el estándar de mercado WPA2, la diferencia entre el WPA y el WPA2 es sólo en el cifrado, no en la autenticación, con lo que el modo “personal” (passphrase compartida) y el modo enterprise (autenticación robusta como la EAP) seguirán siendo los mismos que en WPA.
 
-# Preguntas 
+## Ejemplo de referencias
+
+Ejemplo de agregar algunas referncias con Markdown [@Tanenbaum:2008]
+
