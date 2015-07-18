@@ -1,0 +1,12 @@
+Update mtheme
+=============
+
+mkdir /tmp/mtheme
+cd /tmp/mtheme
+git clone https://github.com/matze/mtheme.git
+
+make all
+make install
+
+cd /home/user/textmf/text/latex/mtheme/
+cp * autoformato/lecciones_beamer
