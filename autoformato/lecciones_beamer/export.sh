@@ -49,8 +49,10 @@ pandoc input.md -t beamer --template=lecciones_beamer.tex --slide-level 2 -o $fi
 #%sed -i 's/includegraphics{/includegraphics\[width=7.0cm\]{/g' "$filename.tex"
 #%sed -i 's/begin{figure}\[htbp\]/begin{figure}\[H\]/g' "$filename.tex"
 
-xelatex -shell-escape -halt-on-error $filename.tex
-xelatex -shell-escape -halt-on-error $filename.tex
+xelatex -shell-escape -halt-on-error $filename
+bibtex $filename
+xelatex -shell-escape -halt-on-error $filename
+xelatex -shell-escape -halt-on-error $filename
 
 cp $filename.pdf $outputdir
 

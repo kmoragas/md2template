@@ -27,6 +27,19 @@ $endif$
 \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo/logo}}
 
 
+\definecolor{LightLightBrown}{HTML}{EB941B}
+\setbeamercolor{frametitle} {fg=LightLightBrown}
+
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\textcolor{alerted text.fg}{\oldtextbf{#1}}}
+
+\usepackage{lipsum}
+
+\setbeamertemplate{frametitle continuation}{}
+
+%\let\oldframe\frame
+%\renewcommand\frame[1][allowframebreaks]{\oldframe[#1]}
+
 \begin{document}
 
 \maketitle
@@ -226,13 +239,13 @@ or show \textbf{bold} results.\end{verbatim}
 
 \section{Conclusion}
 
-\begin{frame}{Summary}
+\begin{frame}{Licencia}
 
-  Get the source of this theme and the demo presentation from
+  Puede obtener el código fuente de esta presentación en
 
-  \begin{center}\url{github.com/matze/mtheme}\end{center}
+  \begin{center}\url{https://github.com/kmoragas/md2template}\end{center}
 
-  The theme \emph{itself} is licensed under a
+  Esta presentación está bajo una licencia 
   \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons
   Attribution-ShareAlike 4.0 International License}.
 
@@ -240,7 +253,7 @@ or show \textbf{bold} results.\end{verbatim}
 
 \end{frame}
 
-\plain{Questions?}
+\plain{¿Preguntas?}
 
 \begin{frame}[allowframebreaks]
 
