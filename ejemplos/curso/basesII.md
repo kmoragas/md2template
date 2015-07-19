@@ -1,62 +1,42 @@
 ---
 
+Instituto: 'Tecnológico de Costa Rica'
 Escuela: 'Escuela de Computación'
-
 Plan: 'Carrera de Ingeniería de Computación, Plan 410.'
-
 NombreCurso: 'Bases de Datos II'
-
 CodigoCurso: 'IC-4302'
 
 Profesor: 'Ing. Kevin Moraga, MSc.'
-
 Email: 'kmoragas@gmail.com'
-
 Twitter: '@kmoragas'
-
 PaginaProfesor: 'http://www.ic-itcr.ac.cr/~kmoragas'
-
 SinopsisProfesor: 'Esta es una sinopsis del profesor'
-
 HorarioConsulta: 'a convenir con cada profesor.'
-
 LugarConsulta: 'Oficinas Administrativas Alajuela.'
 
 TipoCurso: 'Teórico - Práctico'
-
 Creditos: 3
-
 HorasClase: 3
-
 HorasExtraClase: 6
-
 UbicacionPlan: 'Curso del 4to semestre de la carrera de Ingeniería en Computación'
-
 Requisitos: 'IC4301 Bases de Datos I.'
-
 Correquisitos: 'IC-5821 Requerimientos de Software'
-
 RequisitoDe: 'IC-7841 Proyecto de Ingeniería del Software'
-
 Asistencia: 'Libre'
-
 Suficiencia: 'No'
-
 Reconocimiento: 'Si'
-
 Vigencia: 'II semestre 2015.'
+
+tec-template: yes
 
 ---
 
-
-Descripción General
--------------------
+## Descripción General
 
 El curso de base de datos pretende que estudiante obtenga experiencia práctica en la utilización de funcionalidades avanzadas 
 de dos sistemas administradores de bases ampliamente utilizados en el mercado en la actualidad.
 
-Objetivos
----------
+## Objetivos
 
 ### Objetivo General
 
@@ -70,8 +50,7 @@ Evaluar en la práctica funcionalidades avanzadas de un sistema administrador de
 - Valorar ambientes de replicación de bases de datos.
 - Evaluar las tendencias actuales en el campo de la tecnología de base de datos.
 
-Contenidos
-----------
+## Contenidos
 
 ### Introducción -- 1 semana
 
@@ -134,11 +113,9 @@ Contenidos
 
 ### XML en la base de datos -- 1.5 semanas
 
-Aspectos operativos
-===================
+# Aspectos operativos
 
-Metodología de enseñanza y aprendizaje
---------------------------------------
+## Metodología de enseñanza y aprendizaje
 
 Se emplearán técnicas de clases magistrales y desarrollo de casos por parte del profesor, en donde se desarrollarán los aspectos teóricos y prácticos más relevantes de los diferentes temas. Además se combinarán con una alta participación por parte de los estudiantes durante el transcurso de las lecciones, por medio de llamadas orales, respuestas a casos en la pizarra y de trabajos en grupo.
 
@@ -146,8 +123,8 @@ Se presupone que el alumno profundiza los temas abordados en la clase en las lec
 
 El profesor asumirá el papel de facilitador y el estudiante tendrá la mayor responsabilidad de su progreso.
 
-Evaluación
-----------
+## Evaluación
+
 A continuación se detalla la evaluación del curso: 
 
 |                           | %   |
@@ -161,8 +138,7 @@ A continuación se detalla la evaluación del curso:
 |                           | 100 |
 
 
-Bibliografía
-------------
+## Bibliografía
 
 Loney Kevin. Oracle Database 10g: The complete reference. McGraw Hill/Osborne, 2004.
 

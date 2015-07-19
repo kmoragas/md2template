@@ -1,0 +1,141 @@
+\documentclass[10pt]{beamer}
+
+\usetheme{m}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER DEFINED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[spanish,es-lcroman,es-nosectiondot]{babel}
+
+%para las tablas grandes
+\usepackage{longtable}
+
+% Tablas que se autoajustan
+\usepackage{tabularx}
+
+$if(NombreCurso)$
+\title{$NombreCurso$}
+$endif$
+$if(Plan)$
+\subtitle{$Plan$}
+$endif$
+$if(Profesor)$
+\author{$Profesor$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+$if(Instituto)$
+\institute{$Instituto$}
+$endif$
+
+$if(tec-template)$
+\titlegraphic{\hfill\LatexIncludegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/tec}}
+$else$
+  $if(LogoInstituto)$
+    \titlegraphic{\hfill\LatexIncludegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/$LogoInstituto$}}
+  $endif$
+$endif$
+
+$if(tec-template)$
+  \definecolor{LightLightBrown}{HTML}{FFFFFF} %Rojo TEC para Titulos
+  \definecolor{mLightBrown}{HTML}{ED3F36} % Rojo TEC ed3f36
+  \definecolor{mDarkTeal}{HTML}{003366} % Azul TEC
+
+  \setbeamercolor{frametitle} {fg=LightLightBrown}
+$else$
+  \definecolor{LightLightBrown}{HTML}{EB941B}
+  \setbeamercolor{frametitle} {fg=LightLightBrown}
+$endif$
+
+
+% Bold with color
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\textcolor{alerted text.fg}{\oldtextbf{#1}}}
+
+% Delete frametitle numbering after using autobreak
+\setbeamertemplate{frametitle continuation}{}
+
+%\let\oldframe\frame
+%\renewcommand\frame[1][allowframebreaks]{\oldframe[#1]}
+
+% Add columns to presentation
+\newcommand{\columnsbegin}{\begin{columns}[T]}
+\newcommand{\columnsend}{\end{columns}}
+
+% Correct problem with autocite and pandoc
+\newcommand{\autocite}[1]{\cite{#1}}
+
+%Set size for all the images
+
+\let\LatexIncludegraphics\includegraphics 
+\renewcommand{\includegraphics}[2][]{\LatexIncludegraphics[width=4in,height=1.5in,keepaspectratio]{#2}}
+
+% Se corrige el problema con el icono al momento de recrear el comando includegraphics
+\setbeamertemplate{bibliography item}{\LatexIncludegraphics[width=3.5em]{Pictures/book}}
+
+% Allow frame breaks by default
+\let\oldframe\frame
+\renewcommand\frame[1][allowframebreaks=0.7]{\oldframe[#1]}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END USER DEFINED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\spanishsignitems
+
+\maketitle
+
+$if(toc)$
+
+\begin{frame}
+  \frametitle{Agenda}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+$endif$
+
+\section{Aspectos del plan de estudios}
+
+\begin{frame}{Datos generales}
+
+  \begin{tabularx}{\textwidth}{p{6cm}p{10cm}}
+        \textbf{Nombre del curso:}                  & $NombreCurso$         \\
+        \textbf{Código:}                            & $CodigoCurso$         \\
+        \textbf{Tipo de curso:}                     & $TipoCurso$           \\
+                                                    &                       \\
+        \textbf{Nº de créditos:}                    & $Creditos$            \\
+        \textbf{Nº horas de clase por semana:}      & $HorasClase$          \\
+        \textbf{Nº horas extraclase por semana:}    & $HorasExtraClase$     \\
+    \end{tabularx}
+
+\end{frame}
+
+
+\begin{frame}{Datos generales}
+
+  \begin{tabularx}{\textwidth}{p{4cm}p{5.5cm}}
+        \textbf{Ubicación en el plan de estudios:}  & $UbicacionPlan$       \\
+        \textbf{Requisitos:}                        & $Requisitos$          \\
+        \textbf{Correquisitos:}                     & $Correquisitos$       \\ 
+        \textbf{El curso es requisito de:}          & $RequisitoDe$         \\
+        \textbf{Asistencia:}                        & $Asistencia$          \\
+        \textbf{Suficiencia:}                       & $Suficiencia$         \\ 
+        \textbf{Posibilidad de reconocimiento:}     & $Reconocimiento$      \\
+        \textbf{Vigencia del programa:}             & $Vigencia$            \\
+    \end{tabularx}
+
+\end{frame}
+
+
+$body$
+
+\end{frame}
+
+\end{document}
