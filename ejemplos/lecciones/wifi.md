@@ -104,7 +104,7 @@ Los 4 servicios a garantizar son:
 
 ## Ad-hoc
 
-\includegraphics[width=3in]{images/screenshot-2015-07-03_15_23_13.png}
+![Ad-hoc](images/screenshot-2015-07-03_15_23_13.png)
 
 ##  Infraestructura
 
@@ -118,7 +118,7 @@ Los 4 servicios a garantizar son:
 
 ## Infraestructura
 
-\includegraphics[width=4in]{images/screenshot-2015-07-03_15_26_44.png}
+![Infraestructura](images/screenshot-2015-07-03_15_26_44.png)
 
 # Definición genérica de Wi-FI
 ## Definición genérica de Wi-FI
@@ -267,13 +267,11 @@ https://github.com/jgm/pandoc/issues/261
 
 18-Jun-2015 Aun no hay una opción para agregar un tamaño definido a las imágenes. Se espera que para el proximo relase. Será con el siguiente formato:
 
-![image caption](image.jpg {width: "500px"})
-
-Se recomienda el uso siguiente
+Por el momento se recomienda no incluir ningún tamaño
 
 -->
 
-\includegraphics[width=4in,height=2in,keepaspectratio]{images/screenshot-2015-07-03_15_45_23.png}
+![Formato trama de WEP](images/screenshot-2015-07-03_15_45_23.png)
 
 ## Formato trama de WEP
 
@@ -283,7 +281,7 @@ Se recomienda el uso siguiente
 
 - La eficiencia hace que baje la velocidad ya que una vez cifrada la trama enviada, crece en 4 bytes.
 
-\includegraphics[width=4in]{images/screenshot-2015-07-03_15_46_31.png}
+![Formato trama de WEP](images/screenshot-2015-07-03_15_46_31.png)
 
 ## Proceso de cifrado y descifrado del mecanismo WEP
 
@@ -295,7 +293,7 @@ Se recomienda el uso siguiente
 
 ## Proceso de cifrado y descifrado del mecanismo WEP
 
-\includegraphics[width=4in]{images/screenshot-2015-07-03_15_47_21.png}
+![Proceso de cifrado](images/screenshot-2015-07-03_15_47_21.png)
 
 # Métodos de Autenticación WEP
 ## Métodos de Autenticación WEP
@@ -347,7 +345,7 @@ Se hizo mejora de dos tipos de cifrado WEP:
 
 ## Arquitectura del protocolo TKIP
 
-\includegraphics[width=4in]{images/screenshot-2015-07-03_15_51_51.png}
+![Arquitectura TKIP](images/screenshot-2015-07-03_15_51_51.png)
 
 ## Protocolo CCMP
 - El "Counter Mode with CBC-MAC Protocol" es el protocolo diseñado para utilizar el algoritmo de cifrado __AES en 802.11__. CCMP usa el CCM (Counter Mode with CBC-MAC).
@@ -355,7 +353,7 @@ Se hizo mejora de dos tipos de cifrado WEP:
 
 ## Protocolo CCMP
 
-\includegraphics[width=2in]{images/screenshot-2015-07-03_15_52_02.png}
+![Protocolo CCMP](images/screenshot-2015-07-03_15_52_02.png)
 
 
 ## Operación del CCMP

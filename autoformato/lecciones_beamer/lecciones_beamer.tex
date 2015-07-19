@@ -8,6 +8,7 @@
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER DEFINED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 $if(title)$
 \title{$title$}
@@ -26,10 +27,10 @@ $if(institute)$
 $endif$
 
 $if(tec-template)$
-\titlegraphic{\hfill\includegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/tec}}
+\titlegraphic{\hfill\LatexIncludegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/tec}}
 $else$
   $if(logo)$
-    \titlegraphic{\hfill\includegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/$logo$}}
+    \titlegraphic{\hfill\LatexIncludegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/$logo$}}
   $endif$
 $endif$
 
@@ -45,20 +46,32 @@ $else$
 $endif$
 
 
+% Bold with color
 \let\oldtextbf\textbf
 \renewcommand{\textbf}[1]{\textcolor{alerted text.fg}{\oldtextbf{#1}}}
 
-\usepackage{lipsum}
-
+% Delete frametitle numbering after using autobreak
 \setbeamertemplate{frametitle continuation}{}
 
 %\let\oldframe\frame
 %\renewcommand\frame[1][allowframebreaks]{\oldframe[#1]}
 
+% Add columns to presentation
 \newcommand{\columnsbegin}{\begin{columns}[T]}
 \newcommand{\columnsend}{\end{columns}}
 
+% Correct problem with autocite and pandoc
 \newcommand{\autocite}[1]{\cite{#1}}
+
+%Set size for all the images
+
+\let\LatexIncludegraphics\includegraphics 
+\renewcommand{\includegraphics}[2][]{\LatexIncludegraphics[width=4in,height=2in,keepaspectratio]{#2}}
+
+% Se corrige el problema con el icono al momento de recrear el comando includegraphics
+\setbeamertemplate{bibliography item}{\LatexIncludegraphics[width=3.5em]{Pictures/book}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END USER DEFINED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -102,7 +115,7 @@ $body$
   \frametitle{Referencias}
 
   \bibliography{referencias}
-  \bibliographystyle{abbrv}
+  \bibliographystyle{ieeetr}
 
 \end{frame}
 
