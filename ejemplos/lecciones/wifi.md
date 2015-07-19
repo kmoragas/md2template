@@ -10,7 +10,9 @@ institute: Instituto Tecnológico de Costa Rica
 
 bibliography: referencias
 
-tec-template: yes
+logo: tec
+
+# tec-template: yes # Descomentar esta linea para incluir la plantilla TEC
 
 ---
 
@@ -259,7 +261,19 @@ __Wired Equivalent Privacy__ o "Privacidad Equivalente a Cableado": Sistema de c
 
 ## Formato trama de WEP
 
-\includegraphics[width=4in]{images/screenshot-2015-07-03_15_45_23.png}
+<!---
+
+https://github.com/jgm/pandoc/issues/261
+
+18-Jun-2015 Aun no hay una opción para agregar un tamaño definido a las imágenes. Se espera que para el proximo relase. Será con el siguiente formato:
+
+![image caption](image.jpg {width: "500px"})
+
+Se recomienda el uso siguiente
+
+-->
+
+\includegraphics[width=4in,height=2in,keepaspectratio]{images/screenshot-2015-07-03_15_45_23.png}
 
 ## Formato trama de WEP
 
