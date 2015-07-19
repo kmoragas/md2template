@@ -71,6 +71,10 @@ $endif$
 % Se corrige el problema con el icono al momento de recrear el comando includegraphics
 \setbeamertemplate{bibliography item}{\LatexIncludegraphics[width=3.5em]{Pictures/book}}
 
+% Allow frame breaks by default
+\let\oldframe\frame
+\renewcommand\frame[1][allowframebreaks=0.6]{\oldframe[#1]}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END USER DEFINED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}

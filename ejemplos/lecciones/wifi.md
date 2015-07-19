@@ -48,8 +48,6 @@ Seguridad para interfases en redes inalámbricas:
 - En 1999 las empresas __miembros__ de __WECA__ eran: 3com, Airones, Intersil, Lucent, Nokia y Symbol technologies. 
     + El __objetivo__ principal era designar una __marca__ que permitiera mercadear fácil la tecnología inalámbrica asegurando __compatibilidad__ de equipos.
 
-## Historia
-
 - En abril de __2000__, WECA certifica la conectividad de equipos según la norma IEEE802.11b, bajo la marca Wi-Fi. 
     + Esto da al usuario la __garantía__ de que todos los equipos que tengan el __sello Wi-Fi__ pueden operar juntos sin problemas, __independientemente__ del __fabricante__ de cada uno de los equipos con la certificación Wi-Fi.
 
