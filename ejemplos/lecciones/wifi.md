@@ -16,6 +16,16 @@ logo: tec
 
 ---
 
+<!---
+
+https://github.com/jgm/pandoc/issues/261
+
+18-Jun-2015 Aun no hay una opción para agregar un tamaño definido a las imágenes. Se espera que para el proximo relase. Será con el siguiente formato:
+
+Por el momento se recomienda no incluir ningún tamaño
+
+-->
+
 # Seguridad en interfases de redes inalámbricas
 ## Seguridad en interfases de redes inalámbricas
 
@@ -53,8 +63,6 @@ Seguridad para interfases en redes inalámbricas:
 
 - En el año 2002 la asociación __WECA__ estaba formada por casi __150__ miembros en su totalidad.
 
-## Historia
-
 - La familia de estándares 802.11 ha ido naturalmente __evolucionando__ desde su creación, __mejorando__ el __rango__ y __velocidad__ de la transferencia de información y __seguridad__ entre otras cosas.
 
 - La norma __diseñada__ para sustituir el equivalente a las __capas físicas__ y MAC de la norma IEEE802.3. 
@@ -67,8 +75,6 @@ Seguridad para interfases en redes inalámbricas:
 - El IEEE802.11 tiene su __lado oscuro__ ya que el estándar en su temprano desarrollo, se __dejaron de lado__ diversas funcionalidades de __seguridad__, priorizando otras como la __compatibilidad__ o su fiabilidad de conexión.
 
 - Esta tecnología para el año __2000__ había abierto nuevos __agujeros__ de __seguridad__, no sólo por dichas deficiencias en el estándar, sino también, en configuración y el uso incorrecto de la misma.
-
-## Introducción
 
 - Las redes inalámbricas deben ser __sencillas__ y __escalables__, además deben de proporcionar a los usuarios otros servicios que les __garanticen__ la __seguridad__ de sus transmisiones.
 
@@ -100,9 +106,7 @@ Los 4 servicios a garantizar son:
     + Los dispositivos se conectan directamente __entre ellos__, sin necesidad de un punto de acceso o AP (Access Point).
     + Los usuarios han de encontrarse en el __mismo rango de direcciones__ para poder comunicarse.
 
-## Ad-hoc
-
-![Ad-hoc](images/screenshot-2015-07-03_15_23_13.png)
+![](images/screenshot-2015-07-03_15_23_13.png)
 
 ##  Infraestructura
 
@@ -110,13 +114,9 @@ Los 4 servicios a garantizar son:
 
 - El propio __AP__ esta implementado de manera que realiza la función de puente, o __bridge__, entre la red cableada y la inalámbrica.
 
-## Infraestructura
-
 - Cuando se __agrupan__ varias __BSS__ se genera un nuevo conjunto llamado ESS (Extended Service Set), los clientes pasan de un BSS a otro sin necesidad de perder conexión (siempre y cuando las áreas de cobertura sean contiguas).
 
-## Infraestructura
-
-![Infraestructura](images/screenshot-2015-07-03_15_26_44.png)
+![](images/screenshot-2015-07-03_15_26_44.png)
 
 # Definición genérica de Wi-FI
 ## Definición genérica de Wi-FI
@@ -141,8 +141,6 @@ Los 4 servicios a garantizar son:
 - En la __actualidad__, también el estándar IEEE802.11a, conocido como __WIFI 5__, que opera en la banda de __5 GHz__ y que cuenta con canales limpios en el espectro.
     + Esta banda, no __convive__ con tecnologías como Bluetooth, microondas, ZigBee, WUSB.
 
-## Tipos de Wi-Fi
-
 - Su limitación es el alcance por la frecuencia, respecto a estándares que operan en 2.4 GHz.
 
 - El estándar __IEEE802.11n__ opera en __2.4 GHz__ y su alta velocidad es debida a diversas __técnicas de aceleramiento__.
@@ -154,13 +152,9 @@ Los 4 servicios a garantizar son:
 
 - En realidad Wi-Fi está __diseñado__ para conectar equipos en red a __distancias reducidas__, cualquier uso de __mayor alcance__ está expuesto a un riesgo de __interferencias__.
 
-## Seguridad y fiabilidad en Wi-Fi
-
 - La __configuración por defecto__ de muchos dispositivos Wi-Fi es muy __insegura__ (routers, por ejemplo) dado que a partir del __identificador__ del dispositivo se puede conocer la __clave__ de éste; y por tanto acceder y controlar el dispositivo se puede lograr en corto tiempo.
 
 - El acceso no autorizado a un dispositivo Wi-Fi es __muy peligroso__ para el propietario por varios motivos. El más obvio es utilizar una conexión aleatoria que se __monitorice__ y __registre__ toda la información que se transmite en el dispositivo incluyendo información personal, contraseñas...
-
-## Seguridad y fiabilidad en Wi-Fi
 
 - La forma de asegurarlo es seguir algunos consejos:
     + __Cambios frecuentes__ de la contraseña de acceso, utilizando diversos caracteres, minúsculas, mayúsculas y números.
@@ -169,24 +163,16 @@ Los 4 servicios a garantizar son:
     + Configurar los dispositivos conectados con su IP (__indicar__ específicamente qué dispositivos están autorizados para conectarse).
     + Utilización de cifrado: __WPA__.
 
-## Seguridad y fiabilidad en Wi-Fi
-
 Los protocolos de seguridad para cifrado de los estándares Wi-Fi como el WEP, WPA o WPA2 que codifican la información transmitida protegiendo su confidencialidad, que proporciona los mismos equipos.
-
 
 - __WEP__:
     + cifra los datos en la red de modo que sólo el destinatario acceda. Los cifrados de __64 y 128 bits__ son dos niveles de seguridad . WEP codifica los datos mediante una "clave" de cifrado antes de enviarlo al medio (__PSK__). Este tipo de cifrado no está muy recomendado debido a grandes vulnerabilidades que presenta ya que cualquier cracker puede conseguir sacar la clave, incluso aunque esté bien configurado y la clave utilizada sea compleja.
-
-## Seguridad y fiabilidad en Wi-Fi
 
 - __WPA__:
     + Presenta mejoras como generación dinámica de la clave de acceso que se inserta como dígitos alfanuméricos.
 
 - __IPSEC (Túneles IP)__: 
     + En el caso de VPN y el IEEE802.1X, permiten la autenticación y autorización de usuarios.
-
-
-## Seguridad y fiabilidad en Wi-Fi
 
 - __Filtrado de MAC__: 
     + Permite acceso a la red a aquellos dispositivos autorizados. Es recomendable solo entre los mismos equipos y cuando son pocos.
@@ -229,19 +215,13 @@ __Wired Equivalent Privacy__ o "Privacidad Equivalente a Cableado": Sistema de c
 
 - Es un cifrado a nivel 2, usando el algoritmo de cifrado __RC4__ con claves de __64 bits__ (40 bits más __24 bits del vector de iniciación IV__) o de __128 bits__ (104 bits más 24 bits del IV).
 
-## Seguridad en interfases de redes con WEP
-
 - En __1999__, el sistema WEP fue lanzado al mercado para proporcionar confidencialidad __comparable__ a la de una red tradicional __cableada__.
 
 - En __2001__, __varias debilidades__ identificadas por __criptógrafos__, hoy en día una la protección WEP es fácilmente vulnerada con software y se accesa en pocos minutos.
 
-## Seguridad en interfases de redes con WEP
-
 - El método cifra las transmisiones mediante una __clave compartida__ (que los usuarios y el punto de acceso han de conocer) usando el algoritmo __RC4__. El uso de estas claves sirven para realizar la autenticación de usuario en el método Shared-Key Authentication.
 
 - El __IEEE en 2004__, declaró que tanto WEP-40 como WEP-104 fueran __revocados__ por presentar fallos en su propósito de ofrecer seguridad entonces el estándar inicial quedo obsoleto y desfasado a causa de la aparición de métodos de rotura del algoritmo RC4 y del incremento en potencia de los procesadores.
-
-## Seguridad en interfases de redes con WEP
 
 - Ese año el IEEE publicó el __IEEE802.11i__. Algunas de las mejoras propuestas por el 802.11i son __incompatibles__ con el hardware anterior, entre ellas, cifrado mediante __AES__ (Advanced Encryption Standard) que necesita de tarjetas inalámbricas con hardware especializado. Esto propicia que aún hoy se __use__ el sistema __WEP__ por motivos de __compatibilidad__ entre sistemas.
 
@@ -251,35 +231,19 @@ __Wired Equivalent Privacy__ o "Privacidad Equivalente a Cableado": Sistema de c
 
 - Las restricciones del gobierno de USA, respecto a la tecnología criptográfica fueron eliminadas y los fabricantes fueron implementando un protocolo WEP __extendido__ de __128 bits__ usando un tamaño de clave de 104 bits (WEP-104).
 
-## Detalle del cifrado WEP
-
 - El estándar WEP de 128 bits es una cadena de 26 caracteres hexadecimales (0-9, a-f) introducidos por el usuario. Cada carácter representa 4 bits de la clave (4 x 26 = 104 bits). Añadiendo el IV de 24 bits se obtiene lo que se conoce como "Clave WEP de 128 bits".
 
 - Un sistema WEP de __256 bits__ está disponible por algunos fabricantes y como en el sistema anterior, 24 bits de la clave pertenecen a IV, dejando 232 bits para la protección. Consiste en 58 caracteres hexadecimales. (58 x 4 = 232 bits) + 24 bits IV = 256 bits de protección WEP.
 
 ## Formato trama de WEP
 
-<!---
-
-https://github.com/jgm/pandoc/issues/261
-
-18-Jun-2015 Aun no hay una opción para agregar un tamaño definido a las imágenes. Se espera que para el proximo relase. Será con el siguiente formato:
-
-Por el momento se recomienda no incluir ningún tamaño
-
--->
-
-![Formato trama de WEP](images/screenshot-2015-07-03_15_45_23.png)
-
-## Formato trama de WEP
+![](images/screenshot-2015-07-03_15_45_23.png)
 
 - Basado en la imagen anterior, el proceso de cifrado se hace en un módulo hardware donde se integra el algoritmo RC4. El módulo da como resultado a la salida el __payload__ y el __ICV cifrados__, se le agrega la cabecera, el IV y el índice de clave compartida usado (hasta 4 claves WEP distintas definidas en el mismo índice de cada extremo de la comunicación).
 
-## Formato trama de WEP
-
 - La eficiencia hace que baje la velocidad ya que una vez cifrada la trama enviada, crece en 4 bytes.
 
-![Formato trama de WEP](images/screenshot-2015-07-03_15_46_31.png)
+![](images/screenshot-2015-07-03_15_46_31.png)
 
 ## Proceso de cifrado y descifrado del mecanismo WEP
 
@@ -289,9 +253,7 @@ Por el momento se recomienda no incluir ningún tamaño
 
 - Para recuperar el mensaje se vuelve a realizar la operación XOR entre el Cipher Stream recibido y el Key Stream del otro extremo con el RC4 y con clave compartida.
 
-## Proceso de cifrado y descifrado del mecanismo WEP
-
-![Proceso de cifrado](images/screenshot-2015-07-03_15_47_21.png)
+![](images/screenshot-2015-07-03_15_47_21.png)
 
 # Métodos de Autenticación WEP
 ## Métodos de Autenticación WEP
@@ -301,16 +263,12 @@ El sistema WEP utiliza dos métodos de autenticación:
 - __Sistema Abierto__: 
     + El cliente WLAN no se identifica en el Punto de Acceso durante la autenticación. Cualquier cliente, puede verificarse en ese AP y luego intentar conectarse. Después de la autenticación y la asociación el equipo puede ser usado para cifrar los paquetes de datos para el cliente de claves correctas.
 
-## Métodos de Autenticación WEP
-
 - __Clave Compartida__: Este método se divide en cuatro fases:
     + La estación cliente __envía una petición__ de autenticación al Punto de Acceso.
     + El punto de acceso envía de __vuelta__ un __texto modelo__.
     + El cliente tiene que cifrar el __texto modelo__ usando la __clave WEP__ ya configurada, y reenviarlo al Punto de Acceso en otra petición de autenticación. 
     + El Punto de Acceso __descifra el texto codificado__ y lo compara con el texto
 modelo que había enviado.
-
-## Métodos de Autenticación WEP
 
 __Dependiendo del éxito de comparación__, el Punto de Acceso envía una __confirmación__ o una __denegación__. Después de la autenticación y la asociación, WEP se usa para cifrar los paquetes de datos.
 
@@ -343,15 +301,13 @@ Se hizo mejora de dos tipos de cifrado WEP:
 
 ## Arquitectura del protocolo TKIP
 
-![Arquitectura TKIP](images/screenshot-2015-07-03_15_51_51.png)
+![](images/screenshot-2015-07-03_15_51_51.png)
 
 ## Protocolo CCMP
 - El "Counter Mode with CBC-MAC Protocol" es el protocolo diseñado para utilizar el algoritmo de cifrado __AES en 802.11__. CCMP usa el CCM (Counter Mode with CBC-MAC).
 - Igual que TKIP, integra en un mismo proceso el cifrado de datos y el mecanismo de comprobación de integridad de los datos transmitidos.
 
-## Protocolo CCMP
-
-![Protocolo CCMP](images/screenshot-2015-07-03_15_52_02.png)
+![](images/screenshot-2015-07-03_15_52_02.png)
 
 
 ## Operación del CCMP
