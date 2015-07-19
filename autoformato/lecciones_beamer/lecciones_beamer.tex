@@ -25,14 +25,25 @@ $if(institute)$
 \institute{$institute$}
 $endif$
 
-$if(logo)$
-\titlegraphic{\hfill\includegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/$logo$}}
+$if(tec-template)$
+\titlegraphic{\hfill\includegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/tec}}
+$else$
+  $if(logo)$
+    \titlegraphic{\hfill\includegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/$logo$}}
+  $endif$
 $endif$
 
+$if(tec-template)$
+  \definecolor{LightLightBrown}{HTML}{FFFFFF} %Rojo TEC para Titulos
+  \definecolor{mLightBrown}{HTML}{ED3F36} % Rojo TEC ed3f36
+  \definecolor{mDarkTeal}{HTML}{003366} % Azul TEC
 
+  \setbeamercolor{frametitle} {fg=LightLightBrown}
+$else$
+  \definecolor{LightLightBrown}{HTML}{EB941B}
+  \setbeamercolor{frametitle} {fg=LightLightBrown}
+$endif$
 
-\definecolor{LightLightBrown}{HTML}{EB941B}
-\setbeamercolor{frametitle} {fg=LightLightBrown}
 
 \let\oldtextbf\textbf
 \renewcommand{\textbf}[1]{\textcolor{alerted text.fg}{\oldtextbf{#1}}}

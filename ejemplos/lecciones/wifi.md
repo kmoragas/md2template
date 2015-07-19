@@ -10,7 +10,7 @@ institute: Instituto Tecnológico de Costa Rica
 
 bibliography: referencias
 
-logo: tec
+tec-template: yes
 
 ---
 
