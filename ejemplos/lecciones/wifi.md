@@ -1,16 +1,24 @@
 ---
-author:
+Instituto: 'Instituto Tecnológico de Costa Rica'
+LogoInstituto: tec
+Escuela: 'Escuela de Computación'
+Plan: 'Carrera de Ingeniería de Computación, Plan 410.'
+NombreCurso: 'Seguridad en Redes Inalámbricas y Dispositivos Móviles'
+Email: 'kmoragas@gmail.com'
+Twitter: '@kmoragas'
+PaginaProfesor: 'http://www.ic-itcr.ac.cr/~kmoragas'
+
+Autor:
 - Kevin Moraga
-subtitle: Seguridad Wireless y Dispositivos Móviles
-title: Introducción a Tecnologías Wifi
-titlepage-note: |
-  This is a the note that goes on the title page. This talk is to be
-  given at Doing DH.
-institute: Instituto Tecnológico de Costa Rica
+
+Titulo: 'Introducción a Tecnologías Wifi'
+SubTitulo: 'Historia y mecanismos de cifrado'
+
+Objetivo: 'Historia y mecanismos de cifrado'
 
 bibliography: referencias
 
-logo: tec
+# InformacionAdicional: 'Información adicional a la lección'
 
 # tec-template: yes # Descomentar esta linea para incluir la plantilla TEC
 
@@ -183,28 +191,21 @@ __Ocultación del punto de acceso__
 __El protocolo de seguridad llamado WPA2 (estándar 802.11i)__
 :    Es una mejora relativa del WPA, hoy se considera el protocolo aéreo más seguro para Wi-Fi, sin embargo requiere hardware y software diferentes.
 
-## Ventajas y desventajas
-
-\columnsbegin
-\column{.5\textwidth}
-
-__Ventajas:__
+## Ventajas
 
 1. Movilidad y desplazamiento.
 2. Flexibilidad.
 3. Ahorro de costos.
 4. Escalabilidad.
 
-\column{.5\textwidth}
 
-__Desventajas:__
+## Desventajas
 
 1. Menor ancho de banda.
 2. Seguridad
 3. Interferencias (vulnerabilidad)
 4. Incertidumbre tecnológica (cambios)
 
-\columnsend
 
 
 # Método WEP

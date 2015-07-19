@@ -10,27 +10,27 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER DEFINED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-$if(title)$
-\title{$title$}
+$if(Titulo)$
+\title{$Titulo$}
 $endif$
-$if(subtitle)$
-\subtitle{$subtitle$}
+$if(SubTitulo)$
+\subtitle{$SubTitulo$}
 $endif$
-$if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+$if(Autor)$
+\author{$for(Autor)$$Autor$$sep$ \and $endfor$}
 $endif$
 $if(date)$
 \date{$date$}
 $endif$
-$if(institute)$
-\institute{$institute$}
+$if(Instituto)$
+\institute{$Instituto$}
 $endif$
 
 $if(tec-template)$
 \titlegraphic{\hfill\LatexIncludegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/tec}}
 $else$
-  $if(logo)$
-    \titlegraphic{\hfill\LatexIncludegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/$logo$}}
+  $if(LogoInstituto)$
+    \titlegraphic{\hfill\LatexIncludegraphics[width=3.5cm,height=1.5cm,keepaspectratio]{Pictures/$LogoInstituto$}}
   $endif$
 $endif$
 
