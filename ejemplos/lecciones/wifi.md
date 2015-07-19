@@ -6,9 +6,11 @@ title: Introducción a Tecnologías Wifi
 titlepage-note: |
   This is a the note that goes on the title page. This talk is to be
   given at Doing DH.
-institute: Universidad Cenfotec
+institute: Instituto Tecnológico de Costa Rica
 
 bibliography: referencias
+
+logo: tec
 
 ---
 
