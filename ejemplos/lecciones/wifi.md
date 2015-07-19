@@ -26,8 +26,8 @@ Por el momento se recomienda no incluir ningún tamaño
 
 -->
 
-# Seguridad en interfases de redes inalámbricas
-## Seguridad en interfases de redes inalámbricas
+# Seguridad en interfaces de redes inalámbricas
+## Seguridad en interfaces de redes inalámbricas
 
 Seguridad para interfases en redes inalámbricas:
 
@@ -165,23 +165,23 @@ Los 4 servicios a garantizar son:
 
 Los protocolos de seguridad para cifrado de los estándares Wi-Fi como el WEP, WPA o WPA2 que codifican la información transmitida protegiendo su confidencialidad, que proporciona los mismos equipos.
 
-- __WEP__:
-    + cifra los datos en la red de modo que sólo el destinatario acceda. Los cifrados de __64 y 128 bits__ son dos niveles de seguridad . WEP codifica los datos mediante una "clave" de cifrado antes de enviarlo al medio (__PSK__). Este tipo de cifrado no está muy recomendado debido a grandes vulnerabilidades que presenta ya que cualquier cracker puede conseguir sacar la clave, incluso aunque esté bien configurado y la clave utilizada sea compleja.
+__WEP__
+:    cifra los datos en la red de modo que sólo el destinatario acceda. Los cifrados de __64 y 128 bits__ son dos niveles de seguridad . WEP codifica los datos mediante una "clave" de cifrado antes de enviarlo al medio (__PSK__). Este tipo de cifrado no está muy recomendado debido a grandes vulnerabilidades que presenta ya que cualquier cracker puede conseguir sacar la clave, incluso aunque esté bien configurado y la clave utilizada sea compleja.
 
-- __WPA__:
-    + Presenta mejoras como generación dinámica de la clave de acceso que se inserta como dígitos alfanuméricos.
+ __WPA__
+:    Presenta mejoras como generación dinámica de la clave de acceso que se inserta como dígitos alfanuméricos.
 
-- __IPSEC (Túneles IP)__: 
-    + En el caso de VPN y el IEEE802.1X, permiten la autenticación y autorización de usuarios.
+__IPSEC (Túneles IP)__
+:    En el caso de VPN y el IEEE802.1X, permiten la autenticación y autorización de usuarios.
 
-- __Filtrado de MAC__: 
-    + Permite acceso a la red a aquellos dispositivos autorizados. Es recomendable solo entre los mismos equipos y cuando son pocos.
+ __Filtrado de MAC__
+:    Permite acceso a la red a aquellos dispositivos autorizados. Es recomendable solo entre los mismos equipos y cuando son pocos.
 
-- __Ocultación del punto de acceso__:
-    + El acceso al router de manera que sea invisible a otros usuarios.
+__Ocultación del punto de acceso__
+:    El acceso al router de manera que sea invisible a otros usuarios.
 
-- __El protocolo de seguridad llamado WPA2 (estándar 802.11i)__: 
-    + Es una mejora relativa del WPA, hoy se considera el protocolo aéreo más seguro para Wi-Fi, sin embargo requiere hardware y software diferentes.
+__El protocolo de seguridad llamado WPA2 (estándar 802.11i)__
+:    Es una mejora relativa del WPA, hoy se considera el protocolo aéreo más seguro para Wi-Fi, sin embargo requiere hardware y software diferentes.
 
 ## Ventajas y desventajas
 
