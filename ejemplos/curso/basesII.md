@@ -137,7 +137,6 @@ A continuación se detalla la evaluación del curso:
 | Proyectos programados     | 40  |
 |                           | 100 |
 
-
 ## Bibliografía
 
 Loney Kevin. Oracle Database 10g: The complete reference. McGraw Hill/Osborne, 2004.

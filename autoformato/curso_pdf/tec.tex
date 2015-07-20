@@ -232,6 +232,10 @@ $endif$
 
 \huge 
 
+\begingroup
+\hyphenpenalty 10000
+\exhyphenpenalty 10000
+
 \textbf{
 	$if(NombreCurso)$
 	$NombreCurso$ % NombreCurso
@@ -239,6 +243,8 @@ $endif$
 	(Curso sin nombre) % NombreCurso
 	$endif$
 }
+
+\endgroup
 
 \vspace{1cm}
 
@@ -333,10 +339,9 @@ $Profesor$ \vspace{5mm} \\
 \\
 \textbf{Horario y lugar de consulta:} $HorarioConsulta$
 
-Los medios de comunicación oficiales del curso y contactos de los profesores serán brindados en la primera semana de clases.
-\\
-\\
 $if(SinopsisProfesor)$
+\\
+\\
 $SinopsisProfesor$ % NombreCurso
 $endif$
 
