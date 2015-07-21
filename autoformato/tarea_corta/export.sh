@@ -7,7 +7,7 @@ outputdir=$2
 
 display_usage() { 
 	echo ""
-	echo "@kmoragas"
+	echo "AccessNow.org"
 	echo "This script must be run with 2 arguments." 
 	echo -e "\nUsage:\n$0 [.md File] [Output Directory] \n" 
 	} 
@@ -43,7 +43,7 @@ cd $tempdir
 sed '2{/^$/d;}' $filename.md > input1.md
 sed '/div\>/d' input1.md > input.md
 
-pandoc -s -N --template=laboratorio.tex input.md -o $filename.tex
+pandoc -s -N --template=tarea_corta.tex input.md -o $filename.tex
 #sed -i 's/includegraphics{/includegraphics\[width=7.0cm\]{/g' "$filename.tex"
 #sed -i 's/begin{figure}\[htbp\]/begin{figure}\[H\]/g' "$filename.tex"
 pdflatex -halt-on-error $filename.tex
