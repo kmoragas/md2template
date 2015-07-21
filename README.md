@@ -3,7 +3,18 @@
 ## Requerimientos Generales
 
 - Pandoc 1.12.3.3 o superior
+- Pandoc Citeproc
 - Latex completo
+
+Debian
+```
+apt-get install texlive-fonts-extra
+```
+
+Fedora
+```
+$ yum install mozilla-fira-sans-fonts.noarch pandoc.x86_64 pandoc-citeproc.x86_64
+```
 
 ## Requerimientos Presentaciones
 

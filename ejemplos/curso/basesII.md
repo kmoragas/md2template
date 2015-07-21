@@ -233,5 +233,4 @@ Yo __________ hago constar que la llave pública, con el PGP-ID: _________ y con
 10. El contenido académico de las actividades, llámense pruebas cortas, tareas o proyectos, es __acumulativo__.
 9. Los __fraudes__ en cualquier actividad llevada a cabo durante el semestre implicará que se perderá el curso y se reportará la nota mínima. Además se enviará una carta al expediente del estudiante.
 10. La asistencia a clases es obligatoria. Si un estudiante falta al 15% o más del total de horas semestrales pierde automáticamente el curso. Si el estudiante llega 10 minutos después de iniciada la lección se considerará ausente del periodo.
-11. Lo cubierto en tareas cortas, lecturas, proyectos es __materia de examen__. 
-
+11. Lo cubierto en tareas cortas, lecturas, proyectos es __materia de examen__.12. El profesor se reserva el derecho de recolectar anónimamente una copia de la mejor asignación, una con un resultado promedio y una con el peor resultado. Esto con motivos de acreditación. 
