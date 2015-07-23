@@ -18,7 +18,7 @@ $ yum install mozilla-fira-sans-fonts.noarch pandoc.x86_64 pandoc-citeproc.x86_6
 
 ## Requerimientos Presentaciones
 
-- Instalar la fuente FiraSans
+- Instalar la fuente FiraSans (latex-mtheme_0.1.0vidid1_all.deb)
 
 ## Consideraciones
 
