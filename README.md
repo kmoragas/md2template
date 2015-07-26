@@ -48,5 +48,5 @@ md2template$ cd curso_pdf
 curso_pdf$ ./export.sh ../../ejemplos/curso/basesII.md /tmp/
 ```
 
-4. Verifique que en /tmp exista un nuevo pdf llamado: basesII.pdf
+4. Verifique que en `/tmp` exista un nuevo pdf llamado: `basesII.pdf`
 

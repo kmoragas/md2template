@@ -1,12 +1,17 @@
 ---
+Instituto: 'Tecnológico de Costa Rica'
+InstitutoURL: 'tec.ac.cr'
+InstitutoAcercaDe: 'El Tecnológico de Costa Rica (TEC) es una institución nacional autónoma de educación superior universitaria, dedicada a la docencia, la investigación y la extensión de la tecnología y ciencias conexas para el desarrollo de Costa Rica. Fue creado mediante ley No. 4777 del 10 de junio de 1971'
 
-title: 'Configuring PGP on Windows'
+Escuela: 'Escuela de Ingeniería Computación'
 
-keywords: pgp, gpg, windows, GPG4Win
+Titulo: 'Sellado de Tiempo con SINPE'
 
-classification: Public
+Abstract: 'Este proyector trata acerca de la reparación,el mejoramiento y la implementacion de la tecnología de los Arduinos en un futbolín, dicha tecnología se usara para el conteo de goles automatizado, utilizando un LCD y un sensor de Luz'
 
-abstract: This is a « brain friendly » guide based on screen-shots to help you set up encrypted email communication. It takes between 25 and 45 minutes to complete. Access Helpline's staff is at your service if you run into any problem. **PGP** will help you protect your email communications by encrypting your messages before they leave your computer. Only the trusted recipients will be able to read the emails, protecting you from spying and man-in-the-middle attacks. This guide is based on Free and Open Source Software. Through the process we will guide you on the installation and configuration of Thunderbird, Enigmail and GPG.
+Keywords: 'Futbolín, Arduino, Marcador'
+
+Clasificacion: Publico
 
 ---
 
