@@ -80,9 +80,13 @@ $if(graphics)$
 % We will generate all images so they have a width \maxwidth. This means
 % that they will get their normal width if they fit onto the page, but
 % are scaled down if they would overflow the margins.
-%\let\lastincludegraphics\includegraphics
-%\LetLtxMacro\latexincludegraphics\includegraphics
-%\renewcommand{\includegraphics}[2][]{\latexincludegraphics[width=7.5cm]{#2}}
+
+%Set size for all the images
+
+\let\LatexIncludegraphics\includegraphics 
+\renewcommand{\includegraphics}[2][]{\LatexIncludegraphics[width=4in,height=3in,keepaspectratio]{#2}}
+
+
 $endif$
 
 \usepackage{float}
@@ -113,7 +117,7 @@ $endif$
 
 \begingroup
 \thispagestyle{empty}
-\AddToShipoutPicture*{\put(6,5){\includegraphics[scale=1]{background_tec.pdf}}} % Image background
+\AddToShipoutPicture*{\put(6,5){\LatexIncludegraphics[scale=1]{background_tec.pdf}}} % Image background
 \centering
 \vspace*{9cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
@@ -129,7 +133,7 @@ $endif$
 
 \begin{figure}[h]
   \centering
-    \includegraphics[scale=0.5]{logo}
+    \LatexIncludegraphics[scale=0.5]{logo}
 \end{figure}
 
 \endgroup
@@ -271,7 +275,7 @@ $body$
 
 \begin{figure}
   \centering
-    \includegraphics[scale=0.75]{logo}
+    \LatexIncludegraphics[scale=0.75]{logo}
 \end{figure}
 
 

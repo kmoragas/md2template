@@ -327,7 +327,7 @@ innerbottommargin=5pt]{cBox}
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
+\node[anchor=north west,inner sep=0pt] at (0,0) {\LatexIncludegraphics[width=\paperwidth]{\thechapterimage}};
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Commenting the 3 lines below removes the small contents box in the chapter heading
 %\fill[color=ocre!10!white,opacity=.6] (1cm,0) rectangle (8cm,-7cm);
@@ -349,7 +349,7 @@ innerbottommargin=5pt]{cBox}
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
+\node[anchor=north west,inner sep=0pt] at (0,0) {\LatexIncludegraphics[width=\paperwidth]{\thechapterimage}};
 \draw[anchor=west] (5cm,-8cm) node [rounded corners=20pt,fill=ocre!10!white,fill opacity=.6,inner sep=12pt,text opacity=1,draw=ocre,draw opacity=1,line width=1.5pt]{\huge\sffamily\bfseries\textcolor{black}{#1\strut\makebox[22cm]{}}};
 \end{tikzpicture}};
 \end{tikzpicture}}
