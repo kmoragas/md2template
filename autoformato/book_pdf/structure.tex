@@ -11,7 +11,7 @@
 
 \usepackage{tikz} % Required for drawing custom shapes
 
-\usepackage[english]{babel} % English language/hyphenation
+%\usepackage[english]{babel} % English language/hyphenation
 
 \usepackage{enumitem} % Customize lists
 \setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
@@ -95,18 +95,18 @@
 
 \newcommand{\MONTH}{%
   \ifcase\the\month
-  \or January% 1
-  \or February% 2
-  \or March% 3
-  \or April% 4
-  \or May% 5
-  \or June% 6
-  \or July% 7
-  \or August% 8
-  \or September% 9
-  \or October% 10
-  \or November% 11
-  \or December% 12
+  \or Enero% 1
+  \or Frebrero% 2
+  \or Marzo% 3
+  \or Abril% 4
+  \or Mayo% 5
+  \or Junio% 6
+  \or Julio% 7
+  \or Agosto% 8
+  \or Setiembre% 9
+  \or Octubre% 10
+  \or Noviembre% 11
+  \or Diciembre% 12
   \fi}
 
 %----------------------------------------------------------------------------------------
@@ -332,7 +332,7 @@ innerbottommargin=5pt]{cBox}
 % Commenting the 3 lines below removes the small contents box in the chapter heading
 %\fill[color=ocre!10!white,opacity=.6] (1cm,0) rectangle (8cm,-7cm);
 %\node[anchor=north west] at (1.1cm,.35cm) {\parbox[t][8cm][t]{6.5cm}{\huge\bfseries\flushleft \printcontents{l}{1}{\setcounter{tocdepth}{1}}}};
-\draw[anchor=west] (5cm,-9cm) node [rounded corners=20pt,fill=ocre!10!white,text opacity=1,draw=ocre,draw opacity=1,line width=1.5pt,fill opacity=.6,inner sep=12pt]{\huge\sffamily\bfseries\textcolor{black}{\thechapter. #1\strut\makebox[22cm]{}}};
+\draw[anchor=west] (5cm,-8cm) node [rounded corners=20pt,fill=ocre!10!white,text opacity=1,draw=ocre,draw opacity=1,line width=1.5pt,fill opacity=.6,inner sep=12pt]{\huge\sffamily\bfseries\textcolor{black}{\thechapter. #1\strut\makebox[22cm]{}}};
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{tikzpicture}};
 \end{tikzpicture}}
@@ -350,7 +350,7 @@ innerbottommargin=5pt]{cBox}
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
 \node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
-\draw[anchor=west] (5cm,-9cm) node [rounded corners=20pt,fill=ocre!10!white,fill opacity=.6,inner sep=12pt,text opacity=1,draw=ocre,draw opacity=1,line width=1.5pt]{\huge\sffamily\bfseries\textcolor{black}{#1\strut\makebox[22cm]{}}};
+\draw[anchor=west] (5cm,-8cm) node [rounded corners=20pt,fill=ocre!10!white,fill opacity=.6,inner sep=12pt,text opacity=1,draw=ocre,draw opacity=1,line width=1.5pt]{\huge\sffamily\bfseries\textcolor{black}{#1\strut\makebox[22cm]{}}};
 \end{tikzpicture}};
 \end{tikzpicture}}
 \par\vspace*{230\p@}
