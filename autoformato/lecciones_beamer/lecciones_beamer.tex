@@ -72,9 +72,15 @@ $endif$
 \setbeamertemplate{bibliography item}{\LatexIncludegraphics[width=3.5em]{Pictures/book}}
 
 % Allow frame breaks by default
+
+$if(not_frame_breaks)$
+
+$else$
+
 \let\oldframe\frame
 \renewcommand\frame[1][allowframebreaks=0.7]{\oldframe[#1]}
 
+$endif$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END USER DEFINED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
