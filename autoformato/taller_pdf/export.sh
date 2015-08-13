@@ -43,7 +43,7 @@ cd $tempdir
 sed '2{/^$/d;}' $filename.md > input1.md
 sed '/div\>/d' input1.md > input.md
 
-pandoc -s -N --chapters --template=tec.tex input.md -o $filename.tex
+pandoc -s -N --chapters --template=taller.tex input.md -o $filename.tex
 #sed -i 's/includegraphics{/includegraphics\[width=7.0cm\]{/g' "$filename.tex"
 #sed -i 's/begin{figure}\[htbp\]/begin{figure}\[H\]/g' "$filename.tex"
 pdflatex -halt-on-error $filename.tex
