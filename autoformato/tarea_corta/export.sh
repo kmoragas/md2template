@@ -45,7 +45,7 @@ sed '/div\>/d' input1.md > input.md
 
 pandoc -s -N --template=tarea_corta.tex input.md -o $filename.tex
 #sed -i 's/includegraphics{/includegraphics\[width=7.0cm\]{/g' "$filename.tex"
-#sed -i 's/begin{figure}\[htbp\]/begin{figure}\[H\]/g' "$filename.tex"
+sed -i 's/begin{figure}\[htbp\]/begin{figure}\[H\]/g' "$filename.tex"
 pdflatex -halt-on-error $filename.tex
 pdflatex -halt-on-error $filename.tex
 

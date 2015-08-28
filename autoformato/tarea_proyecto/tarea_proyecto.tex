@@ -17,6 +17,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amsfonts,amssymb}	% Math packages
 \usepackage{multicol}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black,anchorcolor=blue]{hyperref}
 
 \usepackage{datetime}
 
@@ -29,6 +30,22 @@
 \def\printtitle{%						% Define command: \printauthor
     {\centering \huge \normalfont \textbf{\@title}\par}}		% Typesetting
 \makeatother							% End definition
+
+
+$if(graphics)$
+\usepackage{graphicx,float}
+% We will generate all images so they have a width \maxwidth. This means
+% that they will get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+
+%Set size for all the images
+
+\let\LatexIncludegraphics\includegraphics 
+
+\renewcommand{\includegraphics}[2][]{\LatexIncludegraphics[width=3in,height=3in,keepaspectratio]{#2}}
+
+
+$endif$
 
 
 $if(Titulo)$
