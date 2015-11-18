@@ -37,13 +37,11 @@ git clone https://github.com/kmoragas/md2template.git
 
 1. Elija a que formato quiere exportar. Por ejemplo: curso_pdf
 2. Cambie de directorio a curso_pdf. 
-
 ```
 md2template$ cd curso_pdf
 ```
 
 3. Compile el ejemplo:
-
 ```
 curso_pdf$ ./export.sh ../../ejemplos/curso/basesII.md /tmp/
 ```
