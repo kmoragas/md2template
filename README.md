@@ -13,7 +13,7 @@ apt-get install texlive-fonts-extra
 
 Fedora
 ```
-$ yum install mozilla-fira-sans-fonts.noarch pandoc.x86_64 pandoc-citeproc.x86_64
+$ yum install mozilla-fira-sans-fonts.noarch pandoc.x86_64 pandoc-citeproc.x86_64 mozilla-fira-mono-fonts.noarch
 ```
 
 ## Requerimientos Presentaciones
