@@ -1,0 +1,98 @@
+
+\documentclass[10pt]{article}
+\usepackage{graphicx,amssymb, amstext, amsmath, epstopdf, booktabs, verbatim, gensymb, geometry, appendix, natbib, lmodern}
+\geometry{letterpaper}
+%\usepackage{garamond}
+
+
+$if(Titulo)$
+\newcommand*\Title{$Titulo$}
+$else$
+\newcommand*\Title{An Example Document}
+$endif$
+
+$if(Email)$
+\newcommand*\Email{$Email$}
+$else$
+\newcommand*\Email{An Example Document}
+$endif$
+
+$if(Instituto)$
+\newcommand*\Instituto{$Instituto$}
+$else$
+\newcommand*\Instituto{An Example Document}
+$endif$
+
+
+$if(Tema)$
+\newcommand*\cpiType{$Tema$}
+$else$
+\newcommand*\cpiType{CPI Template}
+$endif$
+
+\newcommand*\Date{\today}
+
+
+\newcommand*\Author{$Autor$}
+
+$if(Titulo)$
+\title{$Titulo$}
+$else$
+\title{An Example Document}
+$endif$
+
+
+
+\author{$Autor$}
+\date{\today}
+%-----------------------------------------------------------
+
+\usepackage{cpistuff/cpi} % This is what makes your document look like a cpi document.
+
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\linespread{1.15} %Set standard document linespacing
+
+$if(Executive)$
+
+\begin{executive}
+
+$Executive$
+
+\tableofcontents
+
+\end{executive}
+
+
+$else$
+
+\begin{executive}
+
+This is a document describing this template.
+
+\frame{
+\textbf{Key Findings}
+
+After careful analysis, a number of conclusions have been reached:
+\begin{enumerate}
+    \item \textbf{This template works okay.}  But there are some minor hiccups and inelegant features.
+    \item \textbf{Your feedback will help it to improve}  So please provide it.
+    \item \textbf{Once it works well, formatting will not be a concern if you use \LaTeX.} This is the goal.
+\end{enumerate}
+
+These findings are based on an econometric study that uses the fact that state governments have implemented building codes at varying times to isolate the impact of building codes from underlying time trends, state characteristics, shifts in climate and prices, and economic conditions.  This strategy means that the findings described above cannot be attributed to nationwide trends or individual state characteristics that might otherwise lead to inaccurate conclusions.}
+\end{executive}
+
+
+$endif$
+
+
+$body$
+
+\end{document}
+              
