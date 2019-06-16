@@ -1,0 +1,632 @@
+%----------------------------------------------------------------------------------------
+% Tecnologico de Costa Rica
+% Plantilla para cursos
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+% tipo el documento
+\documentclass[11pt,fleqn]{report} 
+
+% Márgenes
+\usepackage[top=3.5cm,bottom=3cm,left=5.5cm,right=3cm,headsep=20pt,letterpaper]{geometry}
+
+% para uso del español
+\usepackage[spanish,es-lcroman,es-nosectiondot]{babel}
+% 8-bit encoding (para uso de glifos
+\usepackage[T1]{fontenc} 
+
+% Soporte para utf8
+\usepackage[utf8]{inputenc}      
+
+% Permite usar colores
+%\usepackage{color}
+
+% Permite definir colores
+\usepackage{xcolor} 
+
+% Azul TEC -> RGB:00447b
+\definecolor{tec}{HTML}{00447B}
+\definecolor{tecdark}{HTML}{003366}
+\definecolor{gray8}{HTML}{333333}
+
+\providecommand{\tightlist}{%
+	  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Para espaciado doble, 1.5 o simple
+\usepackage{setspace}
+
+%% Fuentes 
+%Fuente GWC Goticq (ocupa el paquete fonts-urw-base35)
+\usepackage{helvet} 
+%\renewcommand*\familydefault{\sfdefault}
+
+
+\usepackage{mathptmx} 
+
+% Modificaciones para espaciado
+\usepackage{microtype} 
+
+%----------------------------------------------------------------------------------------
+
+\usepackage[explicit]{titlesec}
+
+% Para el uso de imágenes
+\usepackage{graphicx}
+
+% Para cuadros con cambio de linea
+\usepackage{pbox}
+
+% Para colocar cuadros flotantes
+\usepackage{wrapfig}
+
+%para las tablas grandes
+\usepackage{longtable}
+
+% Tablas que se autoajustan
+\usepackage{tabularx}
+
+% Este no se que putas hace
+\usepackage{booktabs}
+
+% Cambiar la fuente por defecto
+\renewcommand{\familydefault}{\sfdefault}
+
+
+% Pié de página
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{etoolbox}
+
+\makeatletter
+\def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+    \vskip-\footruleskip\vskip-\footrulewidth
+    \color{\footrulecolor}
+    \leavevmode\rlap{\hspace*{-8em}\rule{16cm}{\footrulewidth}}
+    \vskip\footruleskip
+}}
+\makeatother
+
+\newcommand{\footrulecolor}{tec}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyhf{}
+
+
+\lhead{
+    \begin{picture}(0,0)
+        \put(220,0){\includegraphics[scale=0.45]{Pictures/logo_tec.png}}
+    \end{picture}
+}
+
+
+\lfoot{
+	\parindent=-8em
+	\footnotesize 
+    \textcolor{tec}{Escuela de Computación - Carrera de Ingeniería de Computación, Plan 410.}
+}
+\rfoot{
+	\footnotesize 
+    \textcolor{tec}{Página | \thepage \  de \pageref{LastPage} }
+}
+
+\title{Programa de Arquitectura de Computadoras}
+
+\usepackage[pdftex, hidelinks]{hyperref}
+
+\hypersetup{pdftitle={}}
+
+%----------------------------------------------------------------------------------------
+%	Creación de nuevos comandos
+%----------------------------------------------------------------------------------------
+
+% Cambia el texto del nombre del comando \chapter
+\renewcommand{\chaptername}{Parte}
+
+%\renewcommand{\thechapter}{\arabic{chapter}}
+
+\newcounter{lastSectionCounter}
+% Cambia el formato del nombre del comando \chapter
+\renewcommand{\chapter}[1]{
+  \newpage
+  \parindent=-8em
+  \setcounter{lastSectionCounter}{\value{section}}
+  \stepcounter{chapter}
+  \setcounter{section}{\value{lastSectionCounter}} 
+  \textcolor{tecdark}{
+        {
+            \Large 
+            \textbf{\thechapter \ Parte. #1}}}
+  \parindent=0em
+  \vspace{5mm}
+  }
+
+\titleformat{\section}[leftmargin]
+    {
+    %\titlerule*[.6em]{\bfseries.}%
+    %\vspace{6pt}%
+    \large
+    \bfseries
+    }
+    {
+        \color{tec} \thesection
+    }{.5em}{\textcolor{tec}{#1}}
+
+\titlespacing{\section}
+{6pc}{1.5ex plus .1ex minus .2ex}{2pc}
+
+
+\titleformat{\subsection}[hang]
+    {
+    %\color{red} 
+    \bfseries
+    }
+    {\thesubsection}
+    {0pc}{#1}
+
+\titlespacing{\subsection}
+{0pc}{0pt}{5pt}
+
+
+% Cambia el formato de la sección
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+%\setlength{\parskip}{0.5em}
+
+% elimina la numeración de las subsecciones
+\renewcommand\thesubsection{}
+
+\setlength{\parskip}{10pt}
+
+
+%----------------------------------------------------------------------------------------
+%   BEGIN DOCUMENT  
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%\makeatletter
+%\def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \leavevmode\rlap{\hspace*{-8em}\rule{16cm}{\footrulewidth}}
+%    \vskip\footruleskip}}
+%\makeatother
+
+\normalsize
+\spanishsignitems
+
+%----------------------------------------------------------------------------------------
+%   Página de título	
+%----------------------------------------------------------------------------------------
+\thispagestyle{empty}
+
+\begin{picture}(0,0)
+    \put(-175,0){\includegraphics[scale=0.45]{Pictures/header_frontpage.png}}
+\end{picture}
+
+
+\parindent=-7em
+
+~\vfill
+
+\Large
+
+\textbf{
+Programa del curso
+IC-3101 % Codigo Curso
+}
+
+\vspace{3mm}
+
+\huge 
+
+\begingroup
+\hyphenpenalty 10000
+\exhyphenpenalty 10000
+
+\textbf{
+		Arquitectura de Computadoras % NombreCurso
+	}
+
+\endgroup
+
+\vspace{1cm}
+
+\large 
+
+\parindent=-4em
+
+\textcolor{gray8}{
+    \textbf{
+            Escuela de Computación % Escuela
+        }
+}
+
+\textcolor{gray8}{
+    \textbf{
+            Carrera de Ingeniería de Computación, Plan 410. % Plan
+        }
+}
+
+\normalsize 
+
+\parindent=0em
+
+
+
+%----------------------------------------------------------------------------------------
+%	Parte I: Pagina de Plan de Estudios del curso
+%----------------------------------------------------------------------------------------
+
+\chapter{Aspectos relativos al plan de estudios}
+
+
+\parindent=-7em
+
+\textcolor{tec}{
+  {\large \textbf{1 Datos generales}}}
+
+\parindent=-6em
+
+\doublespacing
+  \begin{tabularx}{\textwidth}{p{6cm}p{10cm}}
+        \textbf{Nombre del curso:}                  & Arquitectura de Computadoras         \\
+        \textbf{Código:}                            & IC-3101         \\
+        \textbf{Tipo de curso:}                     & Teórico - Práctico           \\
+                                                    &                       \\
+        \textbf{Nº de créditos:}                    & 4            \\
+        \textbf{Nº horas de clase por semana:}      & 4          \\
+        \textbf{Nº horas extraclase por semana:}    & 8     \\
+                                                    &                       \\
+        \textbf{Ubicación en el plan de estudios:}  & Curso del 2do semestre de la carrera de Ingeniería en Computación       \\
+        \textbf{Requisitos:}                        & IC1400 Fundamentos de Organización de Computadoras.          \\
+        \textbf{Correquisitos:}                     & IC-2001 Estructuras de Datos       \\ 
+        \textbf{El curso es requisito de:}          & Ninguno         \\
+        \textbf{Asistencia:}                        & Obligatoria          \\
+        \textbf{Suficiencia:}                       & No         \\ 
+        \textbf{Posibilidad de reconocimiento:}     & No      \\
+        \textbf{Vigencia del programa:}             & II semestre 2015.            \\
+    \end{tabularx}
+\singlespacing
+
+
+\parindent=0em
+
+%----------------------------------------------------------------------------------------
+%	Cuerpo del programa de Curso
+%----------------------------------------------------------------------------------------
+
+\setcounter{section}{1}
+
+\newpage
+\section{Descripción General}\label{descripciuxf3n-general}
+
+En este curso se estudiarán todos aquellos recursos de la computadora
+que son visibles al programador de bajo nivel. El estudiante será
+preparado en programación en lenguaje ensamblador para una arquitectura
+particular, aunque al mismo tiempo se estudian conceptos arquitectónicos
+presentes de manera extendida en computadoras actuales.
+
+\section{Objetivos}\label{objetivos}
+
+\subsection{Objetivo General}\label{objetivo-general}
+
+Analizar el conocimiento sobre una arquitectura de computadoras actual
+para la programación desde una perspectiva de bajo nivel.
+
+\subsection{Objetivos Específicos}\label{objetivos-especuxedficos}
+
+\begin{itemize}
+\tightlist
+\item
+  Programar de manera competente en el lenguaje ensamblador de al menos
+  una arquitectura.
+\item
+  Entender los alcances y limitaciones que una arquitectura establece a
+  un potencial programador.
+\item
+  Dominar conceptos universales de Arquitectura de Computadoras
+  presentes en diversas computadoras actuales.
+\item
+  Comprender el funcionamiento general de sistemas empotrados.
+\end{itemize}
+
+\section{Contenidos}\label{contenidos}
+
+\subsection{Introducción (1 semana)}\label{introducciuxf3n-1-semana}
+
+\begin{itemize}
+\tightlist
+\item
+  Organización vs.~Arquitectura de Computadoras
+\item
+  Conceptos generales y Repaso histórico
+\item
+  Medidas de rendimiento
+\item
+  ¿Por qué aprender ensamblador?
+\item
+  Arquitectura ejemplo
+\end{itemize}
+
+\subsection{Infraestructura de software (0.5
+semanas)}\label{infraestructura-de-software-0.5-semanas}
+
+\begin{itemize}
+\tightlist
+\item
+  Ensamblador
+\item
+  Linker
+\item
+  Loader
+\item
+  Lenguajes de Alto nivel
+\item
+  Simuladores
+\item
+  Relación con Sistema Operativo
+\end{itemize}
+
+\subsection{Aritmética para computadoras (2
+semanas)}\label{aritmuxe9tica-para-computadoras-2-semanas}
+
+\begin{itemize}
+\tightlist
+\item
+  Repaso Sistemas Numéricos
+\item
+  Diseño general de una ALU
+\item
+  Enteros con y sin signo
+\item
+  Suma, resta y operaciones lógicas
+\item
+  Multiplicación y División
+\item
+  Punto Flotante
+\item
+  Aproximaciones
+\end{itemize}
+
+\subsection{Lenguaje Ensamblador (6
+semanas)}\label{lenguaje-ensamblador-6-semanas}
+
+\begin{itemize}
+\tightlist
+\item
+  Conceptos introductorios.
+\item
+  Formatos de Instrucción.
+\item
+  Modos de Direccionamiento.
+\item
+  Conjunto de instrucciones básico.
+\item
+  Proceso de ensamblaje - desensamblaje.
+\item
+  Programación básica con el ensamblador (aritmética y flujo de
+  control).
+\item
+  Paso de parámetros y construcción de rutinas.
+\item
+  Macros y preensamblaje.
+\item
+  Directivas y Operadores avanzados.
+\item
+  Modularización, ``Linking'' y ``Loading''
+\item
+  Formatos de módulos ejecutables
+\item
+  Comunicación entre Programas
+\end{itemize}
+
+\subsection{Pipeline y modelos de alto rendimiento (2
+semanas)}\label{pipeline-y-modelos-de-alto-rendimiento-2-semanas}
+
+\begin{itemize}
+\tightlist
+\item
+  Introducción y conceptos básicos
+\item
+  Paralelismo vs concurrencia
+\item
+  Pipeline conceptos y dificultades de implantación
+\item
+  Pipeline de instrucciones
+\item
+  Predicción de bifurcaciones
+\item
+  Otros modelos de alto rendimiento
+\end{itemize}
+
+\subsection{RISC vs CISC (0.5 semanas)}\label{risc-vs-cisc-0.5-semanas}
+
+\begin{itemize}
+\tightlist
+\item
+  Diferencias y características de ejecución
+\item
+  Ventajas de CISC y Ventajas de RISC
+\end{itemize}
+
+\subsection{Entrada/Salida (1 semana)}\label{entradasalida-1-semana}
+
+\begin{itemize}
+\tightlist
+\item
+  Conceptos básicos
+\item
+  Tipos y características de dispositivos de E/S
+\item
+  Interfaces E/S con memoria, CPU y Sistema Operativo
+\item
+  DMA -- E/S mapeada a memoria
+\item
+  Diseño de Sistemas de E/S
+\end{itemize}
+
+\subsection{Multiprocesadores (2
+semanas)}\label{multiprocesadores-2-semanas}
+
+\begin{itemize}
+\tightlist
+\item
+  Introducción
+\item
+  Conceptos de Programación
+\item
+  Organizaciones
+\item
+  Interconection Network
+\item
+  Sistemas Multicore
+\item
+  Threads de hardware
+\item
+  Multiprocesadores y jerarquía de memorias
+\item
+  Protocolos de coherencia
+\end{itemize}
+
+\subsection{Sistemas empotrados (1
+semana)}\label{sistemas-empotrados-1-semana}
+
+\begin{itemize}
+\tightlist
+\item
+  Definiciones
+\item
+  System-on-chip
+\item
+  Aplicaciones
+\end{itemize}
+
+\chapter{Aspectos operativos}\label{aspectos-operativos}
+
+\section{Metodología de enseñanza y
+aprendizaje}\label{metodologuxeda-de-enseuxf1anza-y-aprendizaje}
+
+Clases magistrales donde el profesor desarrollará el material teórico
+asociado al curso. Se seguirán dos grandes ramas: entrenamiento en
+programación ensamblador y conceptos de arquitectura de computadoras. Se
+recomienda estos dos temas que no sean cubiertos de manera secuencial,
+sino de manera intercalada para una mejor comprensión e ilustración de
+los temas aprendidos en cada rama. Los estudiantes deberán estudiar
+independientemente material adicional asignado en la forma de lecturas o
+investigaciones bibliográficas, y desarrollarán una serie de proyectos
+de programación en lenguaje ensamblador usando preferiblemente equipos
+instalados en nuestros laboratorios o en su defecto recurriendo a
+simuladores de software de las arquitecturas estudiadas.\\
+En lo posible se contrastará el ensamblador ejemplo con algún otro
+ensamblador que permita apreciar diferencias sustanciales entre ellos.
+
+\section{Evaluación}\label{evaluaciuxf3n}
+
+A continuación se detalla la evaluación del curso:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+& \%\tabularnewline
+\midrule
+\endhead
+Proyectos programados & 40\tabularnewline
+Pruebas o tareas cortas & 25\tabularnewline
+Exámenes & 15\tabularnewline
+Laboratorios & 20\tabularnewline
+& 100\tabularnewline
+\bottomrule
+\end{longtable}
+
+El contenido académico de las actividades, llámense tareas o pruebas
+cortas, son acumulativos. Las pruebas cortas se efectuarán en el momento
+de la clase que el profesor considere más apropiado. El porcentaje de
+las pruebas cortas y tareas será el promedio de las notas obtenidas en
+cada una de ellas. Las pruebas cortas no se reponen, se debe llegar a
+tiempo a las presentaciones.
+
+En caso de que se detecte un plagio o intento de fraude en cualquier
+asignación por parte de un estudiante se procederá según la
+reglamentación del Tecnológico. No se aceptarán trabajos 10 minutos
+después de la fecha y hora indicadas. Por lo tanto, trabajos entregados
+tardíamente tendrán una nota de cero.
+
+\textbf{Aspectos Administrativos:}
+
+\begin{itemize}
+\tightlist
+\item
+  El curso se aprueba con nota de 70. No hay examen de reposición.
+\item
+  El profesor se guarda el derecho de \textbf{revisar la ortografía},
+  redacción y coherencia con puntos negativos, en las asignaciones.
+\item
+  Todas las asignaciones escritas deben de presentarse en formato
+  \textbf{pdf}.
+\item
+  Se debe de realizar la entrega de todos los proyectos y exámenes
+  asignados que posean un valor mayor o igual a un 10\%, de lo contrario
+  se considerará un abandono de curso.
+\item
+  Las pruebas cortas pueden consistir en una asignación para trabajo
+  fuera de clase.
+\item
+  Queda agendado un \textbf{quiz} en cada una de las lecciones del
+  curso, el profesor tomará la decisión de aplicar o no el quiz.
+\item
+  \textbf{No es permitido grabar fotografías}, videos o audio durante la
+  clase.
+\end{itemize}
+
+\section{Bibliografía}\label{bibliografuxeda}
+
+John Henessy, David Patterson, ``Computer Architecture: A Quantitative
+Approach'', 5ta. Edición, Morgan Kauffman, 2012.
+
+Tanenbaum, Andrew, ``Structured Computer Organization'', 5ta. Edición,
+Prentice Hall, 2005.
+
+Duran, Luis. El gran libro del PC Interno. Grupo Marcombo ediciones
+técnicas, primera edición, Barcelona 2007
+
+Irving, Kip. Lenguaje Ensamblador para computadoras basadas en Intel.
+Pearson Prentice Hall. Quinta edición. México, 2008
+
+David Patterson, John Henessy, ``Computer Organization \& Design'', 4ta.
+Edición, Morgan Kauffman, 2009.
+
+Stallings, William. Organización y Arquitectura de Computadores. Pearson
+Educación, setima edición, México 2006.
+
+William Hohl, ``ARM Assembly Language'', CRC Press, 2009
+
+Steve Furber, ``ARM System-on-Chip Architecture'', Pearon Education,
+2000
+
+Englander, Irv. Arquitectura computacional. Compañía editorial
+continental, primera edición, México 2002
+
+Thomas Rauber y Gudula Rünger, ``Parallel Programming: for Multicore and
+Cluster Systems''. Editorial Springer-Verlag. Alemania 2010.
+
+%----------------------------------------------------------------------------------------
+%	Información del profesor
+%----------------------------------------------------------------------------------------
+
+\section{Profesor}
+
+Ing. Jaime Gutiérrez Alfaro. \vspace{5mm} \\
+\textbf{Email:} jaime.cr@gmail.com \\
+\textbf{Página:} http://www.ic-itcr.ac.cr/\textasciitilde{}jgutierrez \\
+\textbf{Twitter:} elotrojames
+\\
+\\
+\textbf{Horario y lugar de consulta:} Jueves de 11:00 a 13:00 y Viernes de 17:00 a 19:00.. Oficinas Administrativas Alajuela.
+
+
+\end{document}
