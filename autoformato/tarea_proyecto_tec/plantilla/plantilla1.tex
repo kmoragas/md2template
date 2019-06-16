@@ -1,13 +1,15 @@
 \documentclass{article}
-% \usepackage[spanish]{babel}
+\usepackage[spanish]{babel}
 % \usepackage{lipsum}
 % \usepackage{natbib}
 % \usepackage{graphicx}
 \usepackage{analysis_orax}
 \usepackage{changepage}
-
+\usepackage{enumitem}% \setlist
 
 \usepackage[colorlinks=true,urlcolor=blue,linkcolor=black,anchorcolor=blue]{hyperref}
+
+\usepackage[defaultlines=10,all]{nowidow}
 
 \providecommand{\tightlist}{%
           \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -21,6 +23,9 @@
 \definecolor{bannergray}{HTML}{2E2F34}
 \definecolor{bannerred}{HTML}{F07468}
 \definecolor{bannertec}{HTML}{00447B}
+
+
+
 
 %------------------Document----------------------------
 
@@ -72,8 +77,8 @@
 
 \begin{tikzpicture}[remember picture,overlay]
 
-\coordinate [below=10.15cm,left=3cm] (objectivopoint) at (current page.north);
-\coordinate [below=10.5cm,left=3cm] (datosgeneralespoint) at (current page.north);
+\coordinate [below=10.15cm,left=2.8cm] (objectivopoint) at (current page.north);
+\coordinate [below=10.5cm,left=2.8cm] (datosgeneralespoint) at (current page.north);
 
 \draw[anchor=south] (objectivopoint) node [fill=bannertec,fill opacity=0.8,text opacity=1,inner sep=1cm]{
 
@@ -113,12 +118,13 @@
 
 
 
-\begin{adjustwidth}{9cm}{}
+\begin{adjustwidth}{8.8cm}{}
 ~\vfill
 
 %-------------------------Content------------------------
 \section{Introducción}\label{introducciuxf3n}
 \large
+\begin{sloppypar}
 Actualmente el tema de anonimato se encuentra cada vez más en el plano
 principal de discusión en el mundo. Esto debido a que en el pasado,
 pueblos han sufrido y su historia se ha visto manchada. Debido a ello se
@@ -135,13 +141,14 @@ es una cuestión de vida o muerte.
 Por lo anterior, el objetivo del proyecto es conocer distintas
 soluciones que nos permitan acercarnos más a esa libertad de expresión
 sin excepciones.
+\end{sloppypar}
 
 \vspace{2cm}
 
 \end{adjustwidth}
 
 
-\newpage
+\newcommand{\sectionbreak}{\clearpage}
 
 \section{Requerimientos Funcionales}\label{requerimientos-funcionales}
 
@@ -290,7 +297,9 @@ el datacasting de QR, tendrá un puntaje adicional. Este puntaje quedará
 a criterio del profesor. Y se podrá también ditribuir puntaje adicional
 para grupos adicionales.
 
-\section{Entregables}\label{entregables}
+\section{Cuestiones administrativas}\label{administrativo}
+
+\subsection{Entregables}\label{entregables}
 
 \begin{itemize}
 \tightlist
@@ -305,7 +314,7 @@ para grupos adicionales.
   PDF con la documentación.
 \end{itemize}
 
-\section{Evaluación}\label{evaluaciuxf3n}
+\subsection{Evaluación}\label{evaluaciuxf3n}
 
 \begin{itemize}
 \tightlist
@@ -325,7 +334,7 @@ para grupos adicionales.
   Extra: 10\%
 \end{itemize}
 
-\section{Documentación}\label{documentaciuxf3n}
+\subsection{Documentación}\label{documentaciuxf3n}
 
 Las siguientes son las instrucciones para la documentación. NO LA
 IMPRIMA. Además la documentación se debe de realizar utilizando MD con
@@ -372,7 +381,7 @@ Latex.
   Es necesario documentar el código fuente.
 \end{enumerate}
 
-\section{Aspectos Adicionales}\label{aspectos-adicionales}
+\subsection{Aspectos Adicionales}\label{aspectos-adicionales}
 
 Aún cuando el código y la documentación tienen sus notas por separado,
 se aplican las siguientes restricciones:
