@@ -7,6 +7,11 @@
 \usepackage{changepage}
 \usepackage{enumitem}% \setlist
 
+\usepackage{soul}
+
+\usepackage{type1cm}
+\usepackage{lettrine}
+
 \usepackage[colorlinks=true,urlcolor=blue,linkcolor=black,anchorcolor=blue]{hyperref}
 
 \usepackage[defaultlines=10,all]{nowidow}
@@ -27,8 +32,6 @@
 \setlength{\footskip}{1.5cm}
 
 
-
-
 %------------------Document----------------------------
 
 \begin{document}
@@ -46,7 +49,7 @@
 
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,-2.3) {\includegraphics[width=\paperwidth,height=30cm]{figures/PIA21073large.jpg}}; % Background image
+\node[anchor=north west,inner sep=0pt] at (0,-2.3) {\includegraphics[width=\paperwidth]{figures/PIA21073large.jpg}}; % Background image
 
 \node[anchor=north west,inner sep=0pt] at (1,-0.5cm) {\includegraphics[scale=0.4]{figures/logo_tec.png}}; % logotec
 
@@ -54,9 +57,9 @@
 
 	\Huge\bfseries\sffamily\parbox[c][][t]{\paperwidth}{
 			\centering \Large \color{white} Proyecto 1 \\[5pt] % Book title
-			{\Huge \color{bannerred} QR-Net	}\\[20pt] % Subtitle
+			{\Huge \color{bannerred}  \fontspec{Verdana} \so {QR-Net}	}\\[20pt] % Subtitle
 			{\small Junio, 2019}
-		}
+			}
 
 }; % Proyect Name
 
@@ -94,7 +97,7 @@
 
 \draw[anchor=north] (datosgeneralespoint) node [fill=bannergray,fill opacity=0.8,text opacity=1,inner sep=1cm]{
 
-	\color{white}\sffamily\parbox[c][11.5cm][t]{6cm}{
+	\color{white}\sffamily\parbox[c][18.5cm][t]{6cm}{
 			{\bfseries \huge  Datos Generales} \\[5pt] % Book title
 			\large 
 			\begin{itemize}
@@ -145,7 +148,7 @@ soluciones que nos permitan acercarnos más a esa libertad de expresión
 sin excepciones.
 \end{sloppypar}
 
-\vspace{2cm}
+\vspace{1.5cm}
 
 \end{adjustwidth}
 
