@@ -1,0 +1,48 @@
+\usepackage{titlesec} 
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage[left=4cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{fancyhdr}
+
+%------------------Main Font-------------------------
+%\usepackage{avant}
+%\usepackage[T1]{fontenc}
+
+%\setmainfont{URW Gothic L}
+\setmainfont{TeX Gyre Adventor}
+%\setmainfont{Fira Sans}
+%Make sure you have the compiler "XeLaTeX" activated on your settings for your LaTeX document in order to see the font 
+
+%------------------Color Set--------------------------
+\definecolor{LightBlue}{RGB}{66, 163, 251}
+\definecolor{DarkBlue}{RGB}{36, 100, 176}
+\definecolor{LightGray}{gray}{.94}
+\definecolor{DarkGray}{gray}{.172}
+\definecolor{Orange}{RGB}{229, 133, 3}
+\definecolor{MediumBlue}{RGB}{38, 119, 193}
+%2E2F34
+
+
+%------------------Section Default Setting-------------
+\titleformat*{\section}{\color{DarkBlue}\normalfont\bfseries\Huge}
+\titleformat*{\subsection}{\color{LightBlue}\normalfont\bfseries\LARGE}
+\titleformat*{\subsubsection}{\color{MediumBlue}\normalfont\bfseries\LARGE}
+
+%-------------------Section Numbers Removal------------
+\setcounter{secnumdepth}{0}
+
+
+%-------------------------Header & Footer------------------------
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{
+\begin{tikzpicture}[remember picture,overlay] \node[anchor=north east, yshift=-4mm, xshift=-2.5cm] at (current page.north east) {\includegraphics[scale=0.3]{figures/logo_tec.png}};
+\end{tikzpicture}
+}
+\fancyfoot[C]{
+\begin{tikzpicture}[remember picture,overlay] \node[anchor=south east, yshift=-1.5mm, xshift=1.5mm] at (current page.south east) {\includegraphics[height=29mm]{figures/banner.png}};
+\end{tikzpicture}
+\textcolor{LightGray}{\thepage}
+}

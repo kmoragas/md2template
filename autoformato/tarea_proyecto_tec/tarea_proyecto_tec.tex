@@ -1,0 +1,183 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+% \usepackage{lipsum}
+% \usepackage{natbib}
+% \usepackage{graphicx}
+\usepackage{analysis_orax}
+\usepackage{changepage}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}% \setlist
+
+\usepackage{soul}
+
+\usepackage{type1cm}
+\usepackage{lettrine}
+
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black,anchorcolor=blue]{hyperref}
+
+\usepackage[defaultlines=10,all]{nowidow}
+
+\providecommand{\tightlist}{%
+          \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+          
+\newcommand{\headerline}[3]{%
+  \par\medskip\noindent
+  \makebox[0pt][l]{#1}%
+  \makebox[20.5cm][c]{\textbf{#2}}%
+  \makebox[0pt][r]{#3}\par\medskip}
+
+\definecolor{bannergray}{HTML}{2E2F34}
+\definecolor{bannerred}{HTML}{F07468}
+\definecolor{bannertec}{HTML}{00447B}
+
+\setlength{\footskip}{1.5cm}
+
+\usepackage{datetime}
+
+\providecommand{\tightlist}{%
+          \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
+
+%------------------Document----------------------------
+
+\begin{document}
+
+%-------------------------TitlePage------------------------
+%\begin{titlepage}
+%\end{titlepage}
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+
+\coordinate [below=5.15cm,left=-5cm] (midpoint) at (current page.north);
+\coordinate [below=29.2cm,left=-5cm] (downpoint) at (current page.north);
+
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (0,-2.3) {\includegraphics[width=\paperwidth]{figures/PIA21073large.jpg}}; % Background image
+
+\node[anchor=north west,inner sep=0pt] at (1,-0.5cm) {\includegraphics[scale=0.4]{figures/logo_tec.png}}; % logotec
+
+\makeatletter
+\renewcommand{\monthnamespanish}[1][\month]{%
+  \@orgargctr=#1\relax
+  \ifcase\@orgargctr
+    \PackageError{datetime}{Invalid Month number \the\@orgargctr}{%
+      Month numbers should go from 1 to 12}%
+    \or Enero%
+    \or Febrero%
+    \or Marzo%
+    \or Abril%
+    \or Mayo%
+    \or Junio%
+    \or Julio%
+    \or Agosto%
+    \or Septiembre%
+    \or Octubre%
+    \or Noviembre%
+    \or Diciembre%
+    \else \PackageError{datetime}{Invalid Month number \the\@orgargctr}{%
+      Month numbers should go from 1 to 12}%
+  \fi}
+\makeatother
+
+\draw[anchor=north] (midpoint) node [fill=bannergray,fill opacity=0.8,text opacity=1,inner sep=1cm]{
+
+	\Huge\bfseries\sffamily\parbox[c][][t]{\paperwidth}{
+			\centering \Large \color{white} $Asignacion$ \\[5pt] % Book title
+			{\Huge \color{bannerred}  \fontspec{Verdana} \so {$Titulo$}	}\\[20pt] % Subtitle
+			{\small \monthyeardate\today}
+			}
+
+}; % Proyect Name
+
+\draw[anchor=north] (downpoint) node [fill=bannertec,fill opacity=1,text opacity=1,inner sep=0.5cm]{
+
+	\color{white}\normalsize\sffamily\parbox[c][][t]{\paperwidth}{
+%			\centering \color{white} $Escuela$ - $NombreCurso$ - Prof. $Profesor$
+			\headerline{$Plan$}{$NombreCurso$}{Prof. $Profesor$}
+		}
+
+}; % Author
+
+
+\end{tikzpicture}};
+\end{tikzpicture}
+\vfill
+\endgroup
+
+\newpage
+
+\begin{tikzpicture}[remember picture,overlay]
+
+\coordinate [below=10.15cm,left=2.8cm] (objectivopoint) at (current page.north);
+\coordinate [below=10.5cm,left=2.8cm] (datosgeneralespoint) at (current page.north);
+
+\draw[anchor=south] (objectivopoint) node [fill=bannertec,fill opacity=0.8,text opacity=1,inner sep=1cm]{
+
+	\color{white}\sffamily\parbox[c][6cm][t]{6cm}{
+			\vfill
+			{\bfseries \huge  Objetivo} \\[5pt] % Book title
+			\large $Objetivo$	
+		}
+
+}; % Objetivo
+
+\draw[anchor=north] (datosgeneralespoint) node [fill=bannergray,fill opacity=0.8,text opacity=1,inner sep=1cm]{
+
+	\color{white}\sffamily\parbox[c][18.5cm][t]{6cm}{
+			{\bfseries \huge  Datos Generales} \\[5pt] % Book title
+			\large 
+			\begin{itemize}
+				\item \textbf{Fecha de Entrega:} \\ $FechaEntrega$.
+				\item \textbf{Fecha de Revisión:} \\ $FechaRevision$.
+				\item \textbf{Lenguaje:} \\ $Lenguaje$
+				\item \textbf{Recurso Humano:}\\ $RecursoHumano$
+				\item \textbf{Valor de la asignación:} $Porcentaje$\%				
+			\end{itemize}			
+			\vspace{1cm}
+			{\bfseries \huge  Profesor} \\[5pt] % Book title
+			$Profesor$\\
+			$Email$\\
+			$Escuela$
+			
+		}
+
+}; % Objetivo
+
+
+
+\end{tikzpicture}
+
+
+
+\begin{adjustwidth}{8.8cm}{}
+~\vfill
+
+%-------------------------Content------------------------
+\section{Introducción}\label{introducciuxf3n}
+\large
+\begin{sloppypar}
+$Introduccion$
+\end{sloppypar}
+
+\vspace{1.5cm}
+
+\end{adjustwidth}
+
+
+\newcommand{\sectionbreak}{\clearpage}
+
+$body$
+
+~\vfill
+
+% %-------------------------Content------------------------
+
+
+\end{document}
