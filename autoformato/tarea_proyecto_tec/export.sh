@@ -44,11 +44,11 @@ sed '2{/^$/d;}' $filename.md > input1.md
 sed '/div\>/d' input1.md > input.md
 
 pandoc -s -N --template=tarea_proyecto_tec.tex input.md -o $filename.tex
-#sed -i 's/includegraphics{/includegraphics\[width=7.0cm\]{/g' "$filename.tex"
-sed -i 's/begin{figure}\[htbp\]/begin{figure}\[H\]/g' "$filename.tex"
+sed -i 's/includegraphics{/includegraphics\[width=9.0cm\]{/g' "$filename.tex"
+sed -i 's/begin{figure}/begin{figure}\[H\]/g' "$filename.tex"
 xelatex -halt-on-error $filename.tex
 xelatex -halt-on-error $filename.tex
 
 cp $filename.pdf $outputdir
 
-#rm -rf $tempdir
+rm -rf $tempdir

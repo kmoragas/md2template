@@ -10,6 +10,7 @@
 \usepackage{enumitem}% \setlist
 
 \usepackage{soul}
+\usepackage{float}
 
 \usepackage{type1cm}
 \usepackage{lettrine}
@@ -54,12 +55,18 @@
 \thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
 
-\coordinate [below=5.15cm,left=-5cm] (midpoint) at (current page.north);
+\coordinate [below=5.15cm,left=-4.5cm] (midpoint) at (current page.north);
 \coordinate [below=29.2cm,left=-5cm] (downpoint) at (current page.north);
 
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,-2.3) {\includegraphics[width=\paperwidth]{figures/PIA21073large.jpg}}; % Background image
+
+$if(Fondo)$
+\node[anchor=north west,inner sep=0pt] at (0,-2.3) {\includegraphics[width=\paperwidth]{$Fondo$}}; % Background image
+$else$
+\node[anchor=north west,inner sep=0pt] at (0,-2.3) {\includegraphics[width=\paperwidth]{figures/background.jpg}}; % Background image
+$endif$
+
 
 \node[anchor=north west,inner sep=0pt] at (1,-0.5cm) {\includegraphics[scale=0.4]{figures/logo_tec.png}}; % logotec
 
@@ -90,7 +97,7 @@
 
 	\Huge\bfseries\sffamily\parbox[c][][t]{\paperwidth}{
 			\centering \Large \color{white} $Asignacion$ \\[5pt] % Book title
-			{\Huge \color{bannerred}  \fontspec{Verdana} \so {$Titulo$}	}\\[20pt] % Subtitle
+			{\Huge  \fontspec{Verdana} \color{bannerred} \so { $Titulo$}	}\\[20pt] % Subtitle
 			{\small \monthyeardate\today}
 			}
 

@@ -22,9 +22,12 @@ FechaRevision: 'Lunes 2 de Setiembre de 2019'
 Lenguaje: 'Python con Twisted'
 RecursoHumano: 'Individual'
 
-Introduccion: 'Uno de los primeros protocolos en existir luego de la creación de ARPANET y posteriorente Internet es SMTP. Pero este protocolo, aún en la actualidad, es uno de los más conocidos y utilizados, después de HTTP. 
-SMTP desde su creación intentó emular de una forma virtual el correo postal y es por ello que a la fecha posee problemas heredados desde su conceptión. 
-Sin embargo, este protocolo nos permite una comunicación en texto de forma distrubuida entre distintos dominios, sin la necesidad de una plataforma única y centralizada. Y es por ello, que es uno de los protocolos más utilizado en la industria para su trabajo diario.'
+Fondo: 'figures/forest.jpg'
+
+Introduccion: |
+	Uno de los primeros protocolos en existir luego de la creación de ARPANET y posteriorente Internet es SMTP. Pero este protocolo, aún en la actualidad, es uno de los más conocidos y utilizados, después de HTTP. 
+	SMTP desde su creación intentó emular de una forma virtual el correo postal y es por ello que a la fecha posee problemas heredados desde su conceptión. 
+	Sin embargo, este protocolo nos permite una comunicación en texto de forma distrubuida entre distintos dominios, sin la necesidad de una plataforma única y centralizada. Y es por ello, que es uno de los protocolos más utilizado en la industria para su trabajo diario.
 
 ---
 # Requerimientos
