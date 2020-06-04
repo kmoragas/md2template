@@ -8,7 +8,7 @@
 
 Debian
 ```
-apt-get install texlive-fonts-extra texlive-*
+apt-get install texlive-fonts-extra texlive-full ttf-mscorefonts-installer
 ```
 
 Fedora
